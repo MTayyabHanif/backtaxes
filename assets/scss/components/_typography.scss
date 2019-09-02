@@ -1,4 +1,4 @@
-body {
+body,html {
 	font-family: $base-font;
 	font-size: 18px;
 }
@@ -48,8 +48,8 @@ p{
 	@include fontsize(21px);
 	@include lineheight(21px, 24px);
 	@media (max-width: 768px){
-		@include fontsize(20px);
-		@include lineheight(20px, 24px);
+		@include fontsize(18px);
+		@include lineheight(18px, 24px);
 	}
 }
 

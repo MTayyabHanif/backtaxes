@@ -1620,7 +1620,8 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
 /*****************
  * TYPOGRAPHY
 ******************/
-body {
+body,
+html {
   font-family: "Marcher", "Helvetica Neue", "Avenir Next", "Segoe UI", "Verdana", sans-serif;
   font-size: 18px; }
 
@@ -1679,10 +1680,10 @@ p {
   line-height: 1.14286; }
   @media (max-width: 768px) {
     .text-21 {
-      font-size: 20px;
-      font-size: 1.11111rem;
+      font-size: 18px;
+      font-size: 1rem;
       line-height: 24px;
-      line-height: 1.2; } }
+      line-height: 1.33333; } }
 
 .text-28 {
   font-size: 28px;
@@ -2761,10 +2762,17 @@ footer.main-footer {
   padding: 0;
   padding-left: 3rem;
   padding-right: 3rem;
-  font-size: 16px;
   margin-top: -3px;
-  line-height: 20px;
-  line-height: 1.25; }
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.33333; }
+  @media (max-width: 768px) {
+    .faqAccordion__answer {
+      font-size: 16px;
+      font-size: 0.88889rem;
+      line-height: 20px;
+      line-height: 1.25; } }
   @media (max-width: 768px) {
     .faqAccordion__answer {
       padding-left: 16px;
@@ -2776,19 +2784,32 @@ footer.main-footer {
     .faqAccordion__answer p:only-child {
       margin: .5rem 0 1rem; }
   .faqAccordion__answer ul {
-    font-size: 16px;
-    font-size: 0.88889rem;
-    line-height: 20px;
-    line-height: 1.25;
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.33333;
     padding: 0;
     margin-bottom: 1rem; }
+    @media (max-width: 768px) {
+      .faqAccordion__answer ul {
+        font-size: 16px;
+        font-size: 0.88889rem;
+        line-height: 20px;
+        line-height: 1.25; } }
   .faqAccordion__answer h1, .faqAccordion__answer h2, .faqAccordion__answer h3, .faqAccordion__answer h4, .faqAccordion__answer h5, .faqAccordion__answer h6 {
     color: #005757;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
-    line-height: 26px;
-    line-height: 1.44444;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.33333;
     margin: 0; }
+    @media (max-width: 768px) {
+      .faqAccordion__answer h1, .faqAccordion__answer h2, .faqAccordion__answer h3, .faqAccordion__answer h4, .faqAccordion__answer h5, .faqAccordion__answer h6 {
+        font-size: 16px;
+        font-size: 0.88889rem;
+        line-height: 20px;
+        line-height: 1.25; } }
     .faqAccordion__answer h1 + p:last-child,
     .faqAccordion__answer h1 + p:only-child,
     .faqAccordion__answer h1 + p, .faqAccordion__answer h2 + p:last-child,
@@ -5219,7 +5240,8 @@ main .heading {
         margin: 26px 0 -70px -18px; } }
     @media (max-width: 550px) {
       .recordings .recording .recording__meta .recording__meta-customer {
-        display: block; } }
+        display: block;
+        margin-bottom: 8px; } }
   .recordings .recording .recording__meta-customer,
   .recordings .recording .recording__meta-audio {
     display: table-cell;
@@ -5299,16 +5321,33 @@ main .heading {
     max-width: 940px;
     margin: 0 auto; }
   @media (max-width: 768px) {
+    .tax-services .tax-services-list {
+      margin: 0; }
     .tax-services .row > div:last-child .tax-services-list {
-      margin-top: -20px; } }
+      margin-top: -38px; } }
   .tax-services .tax-services-list {
     list-style: none; }
+    .tax-services .tax-services-list li {
+      margin-bottom: 8px; }
     .tax-services .tax-services-list img,
     .tax-services .tax-services-list span {
       vertical-align: middle;
       display: inline-block; }
     .tax-services .tax-services-list img {
       max-width: 20px; }
+    @media (max-width: 550px) {
+      .tax-services .tax-services-list img {
+        width: 100%;
+        margin-top: 6px; }
+      .tax-services .tax-services-list span {
+        width: 100%;
+        margin-left: 8px; }
+      .tax-services .tax-services-list li {
+        display: inline-flex;
+        width: 100%;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; } }
 
 .settle-tax .container-fluid {
   max-width: 845px;

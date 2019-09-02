@@ -308,6 +308,7 @@ main {
 			@media (max-width: 550px){
 				.recording__meta-customer{
 					display: block;
+					margin-bottom: 8px;
 				}
 			}
 		}
@@ -435,15 +436,21 @@ main {
 		margin: 0 auto;
 	}
 	@media (max-width: 768px){
+		.tax-services-list{
+			margin: 0;
+		}
 		.row>div:last-child{
 			.tax-services-list{
-				margin-top: -20px;
+				margin-top: -38px;
 			}
 		}
 	}
 
 	.tax-services-list{
 		list-style: none;
+		li{
+			margin-bottom: 8px;
+		}
 		img,
 		span{
 			vertical-align: middle;
@@ -452,7 +459,22 @@ main {
 		img{
 			max-width: 20px;
 		}
-		span{
+		@media (max-width: 550px){
+			img{
+				width: 100%;
+				margin-top: 6px;
+			}
+			span{
+				width: 100%;
+				margin-left: 8px;
+			}
+			li{
+				display: inline-flex;
+				width: 100%;
+				-webkit-box-align: start;
+				-ms-flex-align: start;
+				align-items: flex-start;
+			}
 		}
 	}
 }
