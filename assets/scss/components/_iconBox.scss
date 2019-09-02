@@ -1,0 +1,55 @@
+.iconBox{
+
+
+	.iconBox__wrapper{
+		max-width: 740px;
+		margin: 0 auto 50px;
+		@media (max-width: 768px){
+			margin: 0 16px 50px;
+		}
+	}
+
+	&--inline{
+		display: inline-block;
+		text-align: left;
+
+		margin-right: 25px;
+		&:last-child{
+			margin-right: 0;
+		}
+		@media (max-width: 768px){
+			margin-right: 0;
+			min-width: 250px;
+		}
+	}
+
+
+
+	.iconBox__icon {
+		float: left;
+		border-radius: 50%;
+		background-color: $secondary;
+		width: 65px;
+		height: 65px;
+		img{
+			padding: 16px;
+			max-width: 30px;
+		}
+	}
+
+	.iconBox__content {
+		margin-left: 90px;
+		p{
+			color: #616367;
+			@extend .text-18;
+		}
+	}
+
+	.iconBox__title {
+		@extend .text-20;
+		color: #43474f;
+		font-weight: 600;
+		margin-left: 90px;
+		margin-bottom: 10px;
+	}
+}
