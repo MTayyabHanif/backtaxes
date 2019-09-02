@@ -1702,6 +1702,12 @@ p {
   font-size: 2.11111rem;
   line-height: 44px;
   line-height: 1.15789; }
+  @media (max-width: 768px) {
+    .text-38 {
+      font-size: 28px;
+      font-size: 1.55556rem;
+      line-height: 32px;
+      line-height: 1.14286; } }
 
 .text-43, .counters .iconBox__title,
 .counters .countup {
@@ -2676,6 +2682,8 @@ footer.main-footer {
     .iconBox--inline {
       margin-right: 0;
       min-width: 250px; } }
+  .iconBox--inline .iconBox__wrapper {
+    margin-bottom: 0; }
 
 .iconBox .iconBox__icon {
   float: left;
@@ -2762,27 +2770,27 @@ footer.main-footer {
   padding: 0;
   padding-left: 3rem;
   padding-right: 3rem;
-  margin-top: -3px;
-  font-size: 18px;
-  font-size: 1rem;
-  line-height: 24px;
-  line-height: 1.33333; }
-  @media (max-width: 768px) {
-    .faqAccordion__answer {
-      font-size: 16px;
-      font-size: 0.88889rem;
-      line-height: 20px;
-      line-height: 1.25; } }
+  margin-top: -3px; }
   @media (max-width: 768px) {
     .faqAccordion__answer {
       padding-left: 16px;
       padding-right: 16px; } }
   .faqAccordion__answer p {
-    margin: .5rem 0 1rem; }
+    margin: .5rem 0 1rem;
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.33333; }
     .faqAccordion__answer p:last-child {
       margin: 1rem 0 .5rem; }
     .faqAccordion__answer p:only-child {
       margin: .5rem 0 1rem; }
+    @media (max-width: 768px) {
+      .faqAccordion__answer p {
+        font-size: 16px;
+        font-size: 0.88889rem;
+        line-height: 20px;
+        line-height: 1.25; } }
   .faqAccordion__answer ul {
     font-size: 18px;
     font-size: 1rem;
@@ -5234,7 +5242,8 @@ main .heading {
     padding: 12px 18px;
     background-color: #3c5693;
     font-weight: 500;
-    margin: 35px 0 -65px calc(-30px + 2px); }
+    border-radius: 2px;
+    margin: 35px 0 -65px calc(-30px - 1px); }
     @media (max-width: 768px) {
       .recordings .recording .recording__meta {
         margin: 26px 0 -70px -18px; } }
@@ -5293,8 +5302,6 @@ main .heading {
     @media (max-width: 768px) {
       .free-quote .form-item {
         padding-top: 0; } }
-    .free-quote .form-item .desc {
-      padding-top: 24px; }
   .free-quote label {
     color: #f0f8f9; }
   .free-quote .button, .free-quote [type=button],
@@ -5350,27 +5357,33 @@ main .heading {
         align-items: flex-start; } }
 
 .settle-tax .container-fluid {
-  max-width: 845px;
+  max-width: 880px;
   margin: 0 auto; }
 
 @media (max-width: 768px) {
   .settle-tax .iconBox .iconBox__wrapper {
     margin: 20px 0; } }
 
-.settle-tax .iconBox .iconBox__icon {
-  background-color: transparent;
-  width: auto;
-  height: auto; }
-  .settle-tax .iconBox .iconBox__icon img {
-    padding: 0; }
-  .settle-tax .iconBox .iconBox__icon svg {
-    max-width: 22px; }
-    .settle-tax .iconBox .iconBox__icon svg .cls-1 {
-      fill: #2b97a1; }
+.settle-tax .iconBox {
+  margin-left: 16px;
+  margin-right: 16px; }
+  .settle-tax .iconBox .iconBox__icon {
+    background-color: transparent;
+    width: auto;
+    height: auto; }
+    .settle-tax .iconBox .iconBox__icon img {
+      padding: 0; }
+    .settle-tax .iconBox .iconBox__icon svg {
+      max-width: 22px; }
+      .settle-tax .iconBox .iconBox__icon svg .cls-1 {
+        fill: #2b97a1; }
+  .settle-tax .iconBox .iconBox__content,
+  .settle-tax .iconBox .iconBox__title {
+    margin-left: 42px; }
 
-.settle-tax .iconBox .iconBox__content,
-.settle-tax .iconBox .iconBox__title {
-  margin-left: 42px; }
+.settle-tax .infoBox {
+  margin-left: 16px;
+  margin-right: 16px; }
 
 .faq-section .faqAccordion {
   margin: 0 auto;

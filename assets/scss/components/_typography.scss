@@ -67,6 +67,10 @@ p{
 .text-38{
 	@include fontsize(38px);
 	@include lineheight(38px, 44px);
+	@media (max-width: 768px){
+		@include fontsize(28px);
+		@include lineheight(28px, 32px);
+	}
 }
 
 .text-43{

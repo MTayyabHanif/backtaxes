@@ -299,7 +299,8 @@ main {
 			padding: 12px 18px;
 			background-color: $secondary;
 			font-weight: 500;
-			margin: 35px 0 -65px calc(-30px + 2px);
+			border-radius: 2px;
+			margin: 35px 0 -65px calc(-30px - 1px);
 			@media (max-width: 768px){
 				margin: 26px 0 -70px -18px;
 			}
@@ -399,9 +400,6 @@ main {
 		@media (max-width: 768px){
 			padding-top: 0;
 		}
-		.desc{
-			padding-top: 24px;
-		}
 	}
 	label{
 		color: #f0f8f9;
@@ -483,7 +481,7 @@ main {
 // SETTLE TAX
 .settle-tax{
 	.container-fluid{
-		max-width: 845px;
+		max-width: 880px;
 		margin: 0 auto;
 	}
 
@@ -493,6 +491,8 @@ main {
 		}
 	}
 	.iconBox {
+		margin-left: 16px;
+		margin-right: 16px;
 
 		.iconBox__icon {
 			background-color: transparent;
@@ -512,6 +512,10 @@ main {
 		.iconBox__title {
 			margin-left: 42px;
 		}
+	}
+	.infoBox{
+		margin-left: 16px;
+		margin-right: 16px;
 	}
 }
 
