@@ -190,6 +190,9 @@
 	background-color: #F0F8F9;
 	text-align: center;
 	margin-top: -5rem;
+	@media (max-width: 768px){
+		margin-top: 0;
+	}
 	.brands__wrapper{
 		text-align: center;
 	}
@@ -197,6 +200,10 @@
 		display: inline-block;
 		vertical-align: middle;
 		height: 100%;
+		margin: 56px 0 48px;
+		@media (max-width: 768px){
+			margin: 32px 0;
+		}
 		.brand__image{
 			display: inline-block;
 			vertical-align: middle;
