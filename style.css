@@ -5359,6 +5359,7 @@ main .heading {
       .tax-services .tax-services-list li {
         display: inline-flex;
         width: 100%;
+        box-sizing: border-box;
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start; } }
@@ -5505,7 +5506,8 @@ main .heading {
     width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    box-sizing: border-box; }
     @media (max-width: 992px) {
       .siteFooter .siteFooter__links {
         display: block; } }

@@ -476,6 +476,8 @@ main {
 			li{
 				display: inline-flex;
 				width: 100%;
+				box-sizing: border-box;
+
 				-webkit-box-align: start;
 				-ms-flex-align: start;
 				align-items: flex-start;
@@ -666,6 +668,7 @@ main {
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
 		justify-content: space-between;
+		box-sizing: border-box;
 
 		@media (max-width: 992px){
 			display: block;
