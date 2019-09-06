@@ -88,7 +88,7 @@
 		vertical-align: middle;
 		text-align: right;
 		padding-right: 20px;
-		@media (max-width: 768px){
+		@media (max-width: 765px){
 			display: none;
 		}
 		svg{
@@ -96,7 +96,10 @@
 			margin-right: 6px;
 		}
 		a{
+			display: block;
 			color: $white;
+			text-align: right;
+
 			text-decoration: none;
 		}
 	}
@@ -132,6 +135,7 @@
 
 	.heroHeader__content{
 		display: inline-block;
+		box-sizing: border-box;
 		@media (min-width: 768px){
 			width: 100%;
 		}
@@ -312,6 +316,11 @@ main {
 				margin: 26px 0 -70px -18px;
 			}
 
+			@media (max-width: 550px){
+				margin: 24px 0 -1.72667rem -1.72667rem;
+				width: calc(100% + 2.50rem);
+				padding: 16px 8px;
+			}
 
 			@media (max-width: 550px){
 				.recording__meta-customer{

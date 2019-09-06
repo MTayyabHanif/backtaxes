@@ -12,12 +12,12 @@
    margin: rem(0px) rem(16px);
 
    @media (max-width: 768px){
-      margin: 16px 60px;
-      margin: rem(16px) rem(60px);
+      margin: 0 60px 32px;
+      margin: 0 rem(60px) rem(32px);
    }
    @media (max-width: 440px){
-      margin: 16px 20px;
-      margin: rem(16px) rem(20px);
+      margin: 0 20px 32px;
+      margin: 0 rem(20px) rem(32px);
    }
    .featureBox__title{
       h2{

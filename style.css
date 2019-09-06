@@ -2638,12 +2638,12 @@ footer.main-footer {
   margin: 0rem 0.88889rem; }
   @media (max-width: 768px) {
     .featureBox {
-      margin: 16px 60px;
-      margin: 0.88889rem 3.33333rem; } }
+      margin: 0 60px 32px;
+      margin: 0 3.33333rem 1.77778rem; } }
   @media (max-width: 440px) {
     .featureBox {
-      margin: 16px 20px;
-      margin: 0.88889rem 1.11111rem; } }
+      margin: 0 20px 32px;
+      margin: 0 1.11111rem 1.77778rem; } }
   .featureBox .featureBox__title h2 {
     font-weight: 600;
     color: #43474f; }
@@ -2726,7 +2726,7 @@ footer.main-footer {
 /*****************
  * FAQ ACCORDION
 ******************/
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .faqAccordion {
     margin: 0 16px !important; } }
 
@@ -3004,7 +3004,7 @@ button[disabled] {
 .hide-mobile {
   display: none !important; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 765px) {
   .hide-desktop {
     display: none !important; }
   .hide-mobile {
@@ -5097,14 +5097,16 @@ a.muted:hover {
     vertical-align: middle;
     text-align: right;
     padding-right: 20px; }
-    @media (max-width: 768px) {
+    @media (max-width: 765px) {
       .nav__info {
         display: none; } }
     .nav__info svg {
       margin-bottom: -10px;
       margin-right: 6px; }
     .nav__info a {
+      display: block;
       color: #fff;
+      text-align: right;
       text-decoration: none; }
 
 @media (max-width: 768px) {
@@ -5129,7 +5131,8 @@ a.muted:hover {
   background-repeat: no-repeat;
   background-size: cover; }
   .heroHeader .heroHeader__content {
-    display: inline-block; }
+    display: inline-block;
+    box-sizing: border-box; }
     @media (min-width: 768px) {
       .heroHeader .heroHeader__content {
         width: 100%; } }
@@ -5254,6 +5257,11 @@ main .heading {
     @media (max-width: 768px) {
       .recordings .recording .recording__meta {
         margin: 26px 0 -70px -18px; } }
+    @media (max-width: 550px) {
+      .recordings .recording .recording__meta {
+        margin: 24px 0 -1.72667rem -1.72667rem;
+        width: calc(100% + 2.50rem);
+        padding: 16px 8px; } }
     @media (max-width: 550px) {
       .recordings .recording .recording__meta .recording__meta-customer {
         display: block;
