@@ -5040,6 +5040,12 @@ a.muted:hover {
     .sticky_call a:hover, .sticky_call a:active, .sticky_call a:focus, .sticky_call a:visited {
       color: #fff;
       background-color: #354b81; }
+  @media (max-width: 440px) {
+    .sticky_call a {
+      display: table;
+      width: 100%;
+      max-width: 270px;
+      margin: 0 auto; } }
   .sticky_call a,
   .sticky_call p {
     line-height: 78px;
@@ -5052,14 +5058,15 @@ a.muted:hover {
     .sticky_call .sticky_call__wrap {
       max-width: 320px;
       margin: 0 auto;
-      display: inline-block; } }
+      display: table-cell;
+      height: 70px;
+      vertical-align: middle; } }
   .sticky_call span:not(.sticky_call__wrap) {
     display: inline-block;
     text-align: left; }
     @media (max-width: 440px) {
       .sticky_call span:not(.sticky_call__wrap) {
-        line-height: 1.25;
-        padding-top: 16px; } }
+        line-height: 1.25; } }
   .sticky_call svg {
     margin-bottom: -10px;
     margin-right: 6px;
@@ -5067,8 +5074,7 @@ a.muted:hover {
     @media (max-width: 440px) {
       .sticky_call svg {
         float: left;
-        margin-bottom: 20px;
-        margin-top: 22px;
+        margin-top: 11px;
         margin-right: 20px; } }
   .sticky_call br {
     display: none; }
@@ -5172,7 +5178,7 @@ a.muted:hover {
   background-color: #F0F8F9;
   text-align: center;
   margin-top: -5rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 765px) {
     .brands {
       margin-top: 0; } }
   .brands .brands__wrapper {
@@ -5516,7 +5522,7 @@ main .heading {
     -ms-flex-pack: justify;
     justify-content: space-between;
     box-sizing: border-box; }
-    @media (max-width: 992px) {
+    @media (max-width: 765px) {
       .siteFooter .siteFooter__links {
         display: block; } }
     .siteFooter .siteFooter__links:before {

@@ -20,6 +20,14 @@
 			background-color: $secondary-dark;
 		}
 	}
+	@media (max-width: 440px){
+		a{
+			display: table;
+			width: 100%;
+			max-width: 270px;
+			margin: 0 auto;
+		}
+	}
 	a,
 	p{
 		line-height: 78px;
@@ -32,7 +40,9 @@
 		@media (max-width: 440px){
 			max-width: 320px;
 			margin: 0 auto;
-			display: inline-block;
+			display: table-cell;
+			height: 70px;
+			vertical-align: middle;
 		}
 	}
 	span:not(.sticky_call__wrap){
@@ -40,7 +50,6 @@
 		text-align: left;
 		@media (max-width: 440px){
 			line-height: 1.25;
-			padding-top: 16px;
 		}
 	}
 	svg{
@@ -49,8 +58,7 @@
 		display: inline-block;
 		@media (max-width: 440px){
 			float: left;
-			margin-bottom: 20px;
-			margin-top: 22px;
+			margin-top: 11px;
 			margin-right: 20px;
 		}
 	}
@@ -194,7 +202,7 @@
 	background-color: #F0F8F9;
 	text-align: center;
 	margin-top: -5rem;
-	@media (max-width: 768px){
+	@media (max-width: 765px){
 		margin-top: 0;
 	}
 	.brands__wrapper{
@@ -679,7 +687,7 @@ main {
 		justify-content: space-between;
 		box-sizing: border-box;
 
-		@media (max-width: 992px){
+		@media (max-width: 765px){
 			display: block;
 		}
 		&:before{
