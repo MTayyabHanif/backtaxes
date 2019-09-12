@@ -2756,8 +2756,14 @@ footer.main-footer {
     max-width: 22px;
     display: inline-block;
     vertical-align: middle; }
-    .faqAccordion__question svg .cls-1 {
+    .faqAccordion__question svg path, .faqAccordion__question svg polygon, .faqAccordion__question svg rect {
       fill: #2b97a1; }
+    .faqAccordion__question svg#remove_svg {
+      display: none; }
+  .faqAccordion__question.active svg#remove_svg {
+    display: inline-block; }
+  .faqAccordion__question.active svg#add_svg {
+    display: none; }
 
 .faqAccordion__answer {
   background-color: white;

@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	modalTrigger[0].addEventListener("click", function(e) {
 		document.getElementById("question_modal").classList.remove('display-none');
 		document.getElementById("question_modal").classList.add('modal-opened');
-		document.getElementsByClassName("modal_overlay")[0].classList.remove('display-none');
+		// document.getElementsByClassName("modal_overlay")[0].classList.remove('display-none');
 		document.getElementsByTagName('BODY')[0].classList.add('overflow-hidden')
 	});
 
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	modal_close[0].addEventListener("click", function(e) {
 		document.getElementById("question_modal").classList.add('display-none');
 		document.getElementById("question_modal").classList.remove('modal-opened');
-		document.getElementsByClassName("modal_overlay")[0].classList.add('display-none');
+		// document.getElementsByClassName("modal_overlay")[0].classList.add('display-none');
 		document.getElementsByTagName('BODY')[0].classList.remove('overflow-hidden')
 	});
 

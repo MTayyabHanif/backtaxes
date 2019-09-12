@@ -30,8 +30,23 @@
 			display: inline-block;
 			vertical-align: middle;
 
-			.cls-1 {
+			path,polygon,rect {
 				fill: #2b97a1
+			}
+
+			&#remove_svg{
+				display: none;
+			}
+		}
+
+		&.active {
+			svg{
+				&#remove_svg{
+					display: inline-block;
+				}
+				&#add_svg{
+					display: none;
+				}
 			}
 		}
 	}
