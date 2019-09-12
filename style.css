@@ -2670,7 +2670,7 @@ footer.main-footer {
   margin: 0 auto 50px; }
   @media (max-width: 768px) {
     .iconBox .iconBox__wrapper {
-      margin: 0 16px 50px; } }
+      margin: 0 32px 50px; } }
 
 .iconBox--inline {
   display: inline-block;
@@ -2728,7 +2728,7 @@ footer.main-footer {
 ******************/
 @media (max-width: 770px) {
   .faqAccordion {
-    margin: 0 16px !important; } }
+    margin: 0 32px !important; } }
 
 .faqAccordion__single:last-child .faqAccordion__question {
   border-radius: 0 0 2px 2px; }
@@ -5382,7 +5382,7 @@ main .heading {
   max-width: 880px;
   margin: 0 auto; }
 
-@media (max-width: 768px) {
+@media (max-width: 765px) {
   .settle-tax .iconBox .iconBox__wrapper {
     margin: 20px 0; } }
 
