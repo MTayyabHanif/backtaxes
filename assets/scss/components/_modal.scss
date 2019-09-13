@@ -50,14 +50,14 @@
 		}
 		& .modal__close {
 			display: inline-block;
-			min-height: 16px;
-			min-width: 16px;
-			line-height: 14px;
+			min-height: 20px;
+			min-width: 20px;
+			line-height: 18px;
 			vertical-align: middle;
 			text-align: center;
-			font-size: 24px;
+			font-size: 28px;
 			padding: 4px;
-			opacity: .8;
+			opacity: 1;
 			position: absolute;
 			top: -12px;
 			right: -10px;
@@ -68,7 +68,7 @@
 			&:hover {
 				opacity: 1;
 				cursor: pointer;
-				background-color: rgba(#333, 0.6);
+				background-color: #333;
 				color: #fff;
 			}
 

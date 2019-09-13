@@ -11,10 +11,11 @@
    margin: 0 16px;
    margin: rem(0px) rem(16px);
 
-   @media (max-width: 768px){
+   @media (max-width: 765px){
       margin: 0 60px 32px;
       margin: 0 rem(60px) rem(32px);
    }
+
    @media (max-width: 440px){
       margin: 0 20px 32px;
       margin: 0 rem(20px) rem(32px);
