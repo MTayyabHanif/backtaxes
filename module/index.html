@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Retirement Module</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-slider.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+    <script src="bootstrap-slider.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body translate="no">
+
+<div class="col-lg-8 col-md-8 col-xs-12 col-sm-12 col-lg-offset-2 col-md-offset-2 mx-auto">
+ <div class="form-wrapper">
+    <div id="instruction" style="width:95%;margin:auto;" class="instruction">
+	 <div class="row hidden-xs hidden-sm">
+	  <div class="col-2 col-sm-2 col-lg-2 col-xl-2 text-center">
+		 <!-- <img src="todo.svg" width="150px" height="150px"> -->
+		 <img class="todo-icon" src="todo.svg" alt="tax optiosn to select icon">
+	  </div>
+	  <div class="col-10 col-sm-10 col-lg-10 col-xl-10">
+	    <p>&nbsp;&nbsp;<b>Please Answer The Following Qualification Question To :</b></p>
+		<ul style="list-style:none;margin-left:-15px;">
+	     <li>- Check Your Eligbility for Various IRS & State Tax Programs.</li>
+	     <li>- See If You Qualify To settle With The IRS or State for Less.</li>
+	     <li>- Get A Tax Consultation(No Charge) To Understand Possible Options.</li>
+		</ul>
+	    <p>&nbsp;&nbsp;<b>(Form Takes 3 Minutes - Safe & Secure Tax Help For All 50 States)</b></p>
+	  </div>
+	 </div>
+	 <div class="row hidden-md hidden-lg">
+	 	<div class="col-xs-12 col-sm-3 col-md-3">
+	 		 <img src="todo.svg" class="todo-icon-mobile" >
+	 	</div>
+	 	<div class="col-xs-12 col-sm-9 col-sm-9" style="font-size: 15px;">
+	     <p style="font-size: 15px;margin-bottom: 0px;"><b>Please Answer The Following Qualification Question To :</b></p>
+		 <ul style="list-style:none;font-size: 15px;margin:0px;padding: 0px;">
+	     <li style="font-size: 15px;line-height:17px;margin:0px;padding: 0px;">- Check Your Eligbility for Various IRS & State Tax Programs.</li>
+	     <li style="font-size: 15px;line-height:17px;margin:0px;padding: 0px;">- See If You Qualify To settle With The IRS or State for Less.</li>
+	     <li style="font-size: 15px;line-height:17px;margin:0px;padding: 0px;">- Get A Tax Consultation(No Charge) To Understand Possible Options.</li>
+		</ul>
+	    <p style="font-size: 15px;"><b>(Form Takes 3 Minutes - Safe & Secure Tax Help For All 50 States)</b></p>
+	 	</div>
+	 </div>
+	</div>
+	<div id="myProgress" class="row">
+	  <div id="myBar"></div>
+	</div><br>
+	<form action="" method="post">
+	<!-- Question 1 starts-->
+     <div id="div_question_1" class="row">
+	  <h4>1. What Caused You To Accumulate Tax Debt? (Click All That Apply) </h4>
+	  <div class="col-lg-10 col-md-10 col-xs-12 col-sm-12 col-lg-offset-1 col-md-offset-1 mx-auto answer">
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Personal Issues (Divorce, Sickness, Family, Unemployment)"> Personal Issues (Divorce, Sickness, Family, Unemployment)</label>
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Forgot to File or Claim Income" > Forgot to File or Claim Income </label>
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Underwithheld or Failure to Pay Estimated Taxes" > Underwithheld or Failure to Pay Estimated Taxes </label>
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Withdrew From 401k or Retirement Account" > Withdrew From 401k or Retirement Account </label>
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Tax-Related Identity Theft" > Tax-Related Identity Theft </label>
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Unpaid 940/491 Payroll Taxes" > Unpaid 940/491 Payroll Taxes </label>
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Audit Results or Wrongly Claimed Dependent" > Audit Results or Wrongly Claimed Dependent </label>
+		<label><input type="checkbox" class="checkOptions" name="question_1[]" value="Other" > Other </label>
+	  </div>
+	  <input type="hidden" name="pgcount" value="1">
+	  <div align="center" class="col-md-4 col-xs-12 col-sm-12 col-md-offset-4" >
+	  	<center>
+	   <button type="button" onclick="save_1()">Next</button>
+	   </center>
+	  </div>
+	  <script type="text/javascript">
+	  	var checkBoxValues;
+	  	function save_1(){
+
+	  		if(document.querySelector('input[name="question_1[]"]:checked') == null) {
+			    window.alert("You need to choose an option!");
+
+			   }
+			else{
+
+		    var checkBoxValues = $("[name=question_1\\[\\]]").map(function() {
+		      if ($(this).is(':checked')) {
+		        return this.value;
+		      }
+		    }).get().join();
+
+
+
+
+				show_next_question('1','2');
+			}
+	  }
+	  </script>
+      <h5 style="clear:both">Each and every taxpayer has a set of fundamental rights they should be aware of when dealing with the IRS ~ IRS.gov</h5>
+     </div>
+	</form>
+	<!-- Question 1 ends-->
+	<!-- Question 2 starts-->
+	<div id="div_question_2" class="row" style="display:none;">
+		<h4>2. What Tax Agency Claims You Owe Taxes? </h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+			<center><button class="answerbutton"  onclick="save_2('FEDERAL')" >IRS</button></center>
+			<center><button class="answerbutton"  onclick="save_2('STATE')" >State</button></center>
+			<center><button class="answerbutton"  onclick="save_2('FEDERAL_AND_STATE')" >Both IRS & State</button></center>
+		</div><br><br><br><br>
+		<h5>Many states have similar tax relief programs to the IRS</h5>
+		<script type="text/javascript">
+
+			var question_2;
+           function save_2(q2){
+
+           question_2 = q2;
+            document.getElementById("ag").innerHTML = question_2;
+
+
+
+			show_next_question('2','3');
+		}
+		</script>
+    </div>
+	<!-- Question 2 ends-->
+	<!-- Question 3 starts-->
+	<div id="div_question_3" class="row" style="display:none;">
+		<h4>3. Do You Need Business Tax Debt or Personal Tax Debt Relief?</h4>
+			<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+				<center><button class="answerbutton" onclick="save_3('Personal Tax Debt Relief')">Personal Tax Debt Relief</button></center>
+				<center><button class="answerbutton" onclick="save_3('Business Tax Debt Relief')">Business Tax Debt Relief</button></center>
+				<center><button class="answerbutton" onclick="save_3('Both Business & Personal')">Both Business & Personal</button></center>
+		<script type="text/javascript">
+			var question_3;
+            function save_3(q3){
+            question_3 = q3;
+
+
+			show_next_question('3','4');
+		}
+		</script>
+			</div><br><br><br><br>
+			<h5>Addressing business issues cannot only save your business but it can prevent them from becoming personal tax debt issues</h5>
+    </div>
+	<!-- Question 3 ends-->
+	<!-- Question 4 starts-->
+	<div id="div_question_4" class="row" style="display:none;">
+		<h4>4. What Are You Most Concerned About With Your Tax Debt Situation? (Click All That Apply)</h4>
+			<div class="col-lg-8 col-md-8 col-xs-10 col-sm-10 col-lg-offset-2 col-md-offset-2 col-xs-offset-1 col-sm-offset-1 mx-auto answer">
+				<label><input type="checkbox" class="checkOptions"  name="question_4[]" value="Tax Liens"> Tax Liens</label>
+				<label><input type="checkbox" class="checkOptions" name="question_4[]" value="Wage Garnishment / Bank Levies / Asset Seizure" > Wage Garnishment / Bank Levies / Asset Seizure </label>
+				<label><input type="checkbox" class="checkOptions" name="question_4[]" value="Financial Hardship & Credit" > Financial Hardship & Credit</label>
+				<label><input type="checkbox" class="checkOptions" name="question_4[]" value="Tax Penalties & Interest" > Tax Penalties & Interest</label>
+				<label><input type="checkbox" class="checkOptions" name="question_4[]" value="Losing Personal or Business Assets" > Losing Personal or Business Assets</label>
+				<label><input type="checkbox" class="checkOptions" name="question_4[]" value="Other" > Other</label>
+			</div><br>
+		<input type="hidden" name="pgcount" value="1">
+		<div align="center" class="col-md-4 col-xs-12 col-sm-12 col-md-offset-4 " >
+		 <center><button type="button" class="" onclick="save_4()" style="background-color: #2D3F89;">Next</button></center>
+		</div>
+		 <script type="text/javascript">
+		 	var checkBoxValues1;
+	  	function save_4(){
+
+	  		if(document.querySelector('input[name="question_4[]"]:checked') == null) {
+			    window.alert("You need to choose an option!");
+			}
+			else{
+			var checkBoxValues1= $("[name=question_4\\[\\]]").map(function() {
+		      if ($(this).is(':checked')) {
+		        return this.value;
+		      }
+		    }).get().join();
+
+				show_next_question('4','5');
+			}
+	  }
+	  </script>
+		<h5>You are not alone, millions of taxpayers a year become delinquent with IRS or state taxes and there is help available.</h5>
+    </div>
+	<!-- Question 4 ends-->
+	<!-- Question 5 starts-->
+	<div id="div_question_5" class="row" style="display:none;">
+	  <h4>5. Do You Have Unfiled Tax Returns (Tax Returns You Didn’t File)?</h4>
+	  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+		<center><button class="answerbutton" onclick="save_5('Yes')">Yes</button></center>
+		<center><button class="answerbutton" onclick="save_5('No')">No</button></center>
+		<script type="text/javascript">
+			var question_5;
+            function save_5(q5){
+           question_5 = q5;
+
+			show_next_question('5','6');
+		}
+		</script>
+	  </div><br><br><br><br>
+      <h5>Many taxpayers end up owing more than they really owe if they do not file a tax return so sometimes filing an unfiled tax return can reduce the balance you owe.</h5>
+    </div>
+	<!-- Question 5 ends-->
+	<!-- Question 6 starts-->
+	<div id="div_question_6" class="row" style="display:none;">
+		<h4>6. Can You Pay Your Tax Debt In Full?</h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+			<center><button class="answerbutton" onclick="save_6('Yes')">Yes</button></center>
+			<center><button class="answerbutton" onclick="save_6('No')">No</button></center>
+			<script type="text/javascript">
+				var question_6;
+            function save_6(q6){
+              question_6 = q6;
+
+			show_next_question('6','7');
+		}
+		</script>
+		</div><br><br><br><br>
+		<h5>Settling for less than you owe is possible, but it is rare and you need to qualify from a financial perspective.</h5>
+    </div>
+	<!-- Question 6 ends-->
+	<!-- Question 7 starts-->
+	<div id="div_question_7" class="row" style="display:none;">
+		<h4>7. Do You Have Money In Bank Accounts or Retirement Accounts You Need Protected?</h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+
+			<center><button class="answerbutton" onclick="save_7('Yes')">Yes</button></center>
+			<center><button class="answerbutton" onclick="save_7('No')">No</button></center>
+			<script type="text/javascript">
+				var question_7;
+            function save_7(q7){
+              question_7 = q7;
+
+			show_next_question('7','8');
+		}
+		</script>
+		</div><br><br><br><br>
+		<h5>The IRS prefers to voluntarily collect from you and not through enforced collections (tax levies, garnishment.</h5>
+    </div>
+	<!-- Question 7 ends-->
+	<!-- Question 8 starts-->
+	<div id="div_question_8" class="row" style="display:none;">
+		<h4>8. Have <!--<span id="answer_8"></span>--> you experienced aggressive collection actions (this includes tax liens, bank levies, or garnishment)? </h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+			<center><button class="answerbutton" onclick="save_8('Yes')">Yes</button></center>
+			<center><button class="answerbutton" onclick="save_8('No')">No</button></center>
+			<script type="text/javascript">
+				var question_8;
+            function save_8(q8){
+              question_8 = q8;
+
+			show_next_question('8','9');
+		}
+		</script>
+		</div><br><br><br><br>
+		<h5>The IRS is one of the strongest collection agencies in the world.</h5>
+    </div>
+	<!-- Question 8 ends-->
+	<!-- Question 9 starts-->
+	<div id="div_question_9" class="row" style="display:none;">
+		<h4>9. <!--Has <span id="answer_9"></span>--> Have You Received Certified Tax Collection Letters or Notices? </h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+			<center><button class="answerbutton" onclick="save_9('Yes')">Yes</button></center>
+			<center><button class="answerbutton" onclick="save_9('No')">No</button></center>
+			<script type="text/javascript">
+				var question_9;
+            function save_9(q9){
+              question_9 = q9;
+
+			show_next_question('9','10');
+		}
+		</script>
+		</div><br><br><br><br>
+        <h5>Unless you changed addresses and didn’t let the IRS or State know, when you owe taxes you will first get notices or letters in the mail.</h5>
+    </div>
+	<!-- Question 9 ends-->
+	<!-- Question 10 starts-->
+	<div id="div_question_10" class="row" style="display:none;">
+		<h4>10. Do You Want to Reduce or Abate Tax Penalties? </h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+			<center><button class="answerbutton" onclick="save_10('Yes')">Yes</button></center>
+			<center><button class="answerbutton" onclick="save_10('No')">No</button></center>
+			<script type="text/javascript">
+				var question_10;
+            function save_10(q10){
+              question_10 = q10;
+
+			show_next_question('10','11');
+		}
+		</script>
+		</div><br><br><br><br>
+		<h5>The IRS and many states offer taxpayers the ability to reduce or eliminate tax penalties if there is "reasonable cause.</h5>
+    </div>
+	<!-- Question 10 ends-->
+	<!-- Question 11 starts-->
+	<div id="div_question_11" class="row" style="display:none;position:relative;">
+		<h4>11. Are You Currently In Bankruptcy?</h4>
+		<div class="col-xs-12 mx-auto answer">
+			<center class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3"><button class="answerbutton" onclick="save_11('Yes')">Yes</button></center>
+			<center class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3"><button class="answerbutton" onclick="save_11('No')">No</button></center>
+			<div>
+				<p id="bankruptcy_message" style="margin: 0;font-weight: 700;text-align: center;background: rgba(0,79,248, 0.3);padding: 20px 0;">Sorry, unfortunately if you are in bankruptcy, tax relief services will not be available to you until the bankruptcy comes to a close. If you clicked yes in error, please click <a href="#" id="save_11_force" style="color: #333;">HERE</a> and continue the form.</p>
+			</div>
+			<script type="text/javascript">
+				$('#bankruptcy_message').hide();
+				var question_11;
+				function save_11(q11){
+
+					question_11= q11;
+					if ('Yes' == q11) {
+						$('#bankruptcy_message').parent().siblings('center').hide();
+						$('#bankruptcy_message').show();
+						$('#bankruptcy_message').parent().siblings('center');
+					} else {
+						show_next_question('11','12');
+					}
+				}
+
+				$('#save_11_force').on('click', function(e){
+					e.preventDefault();
+					$('#bankruptcy_message').parent().siblings('center').show();
+					$('#bankruptcy_message').hide();
+					show_next_question('11','12');
+				});
+		</script>
+		</div><br><br><br><br>
+		<p id="error" style="display:none;clear:both;" class="error">Sorry, unfortunately if you are in bankruptcy, tax relief services will not be available to you until the bankruptcy comes to a close. If you clicked yes in error, please click <a href='#' style="color:black;text-decoration:none;" onclick="show_next_question('11','12')">HERE</a> and continue the form</p>
+        <h5>Tax relief services are generally not available to individuals or businesses currently in bankruptcy.</h5>
+    </div>
+	<!-- Question 11 ends-->
+	<!-- Question 12 starts-->
+	<div id="div_question_12" class="row" style="display:none;">
+		<h4>12. Do You Already Have a Tax Payment Plan With <!--<span id="answer_12"></span>--> That’s Unaffordable?  </h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+		 <center><button class="answerbutton" onclick="save_12('Yes')">Yes</button></center>
+		 <center><button class="answerbutton" onclick="save_12('No')">No</button></center>
+		 <script type="text/javascript">
+		 	var question_12;
+            function save_12(q12){
+            question_12 = q12;
+
+
+			show_next_question('12','13');
+		}
+		</script>
+		</div><br><br><br><br>
+		<h5>If a payment plan has become unaffordable, generally taxpayers can get it reduced if they can prove they cannot afford the existing payment plan. In some cases, if they cannot afford one at all they can seek a hardship status</h5>
+    </div>
+	<!-- Question 12 ends-->
+	<!-- Question 13 starts-->
+	<div id="div_question_13" class="row" style="display:none;">
+		<h4>13. How Much In Taxes Do They Claim You Owe?<!--How Much Does <span id="answer_13"></span> Claim You Owe? (Estimate Is Fine)  --></h4>
+		<div class="col-md-6 col-xs-12 col-sm-12 col-md-offset-3  answer">
+				<br/><br/>
+				<center>
+		    <select class="form-control" name="question_13" id="question_13" onchange="show_next_question('13','14')">
+				<option value="">Select Tax Debt Estimate</option>
+				<option value="$7,500 to $9,999" >$7,500 to $9,999</option>
+				<option value="$10,000 to $14,999" >$10,000 to $14,999</option>
+				<option value="$15,000 to $19,999" >$15,000 to $19,999</option>
+				<option value="$20,000 to $24,999" >$20,000 to $24,999</option>
+				<option value="$25,000 to $29,999" >$25,000 to $29,999</option>
+				<option value="$30,000 to $39,999" >$30,000 to $39,999</option>
+				<option value="$40,000 to $59,999" >$40,000 to $59,999</option>
+				<option value="$60,000 to $79,999" >$60,000 to $79,999</option>
+				<option value="$80,000 to $99,999" >$80,000 to $99,999</option>
+				<option value="$100,000+" >$100,000+</option>
+			</select><br><br><br>
+			</center>
+		</div><br>
+		<h5>Estimating The Amount They Claim You Owe Is Fine</h5>
+    </div>
+	<!-- Question 13 ends-->
+	<!-- Question 14 starts-->
+	<div id="div_question_14" class="row" style="display:none;">
+		<h4>14. Do You Want to Find Out What Tax Relief Programs You Qualify For?   </h4>
+		<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-4 col-md-offset-3  mx-auto answer">
+				<center><button class="answerbutton" onclick="save_14('Yes')">Yes</button></center>
+				<center><button class="answerbutton" onclick="save_14('No')">No</button></center>
+				<script type="text/javascript">
+					var question_14;
+            function save_14(q14){
+             question_14 = q14;
+
+			show_next_question('14','15');
+		}
+		</script>
+		</div><br><br><br><br>
+        <h5>The best tax relief option is dependent on your tax and financial situation.</h5>
+    </div>
+	<!-- Question 14 ends-->
+	<!-- Question 15 starts-->
+	<div id="div_question_15" style="display:none;padding-bottom:60px;">
+		<h4 style="margin-bottom:20px;">Congrats! You look like a candidate that can benefit from tax relief programs. Please complete the following to get your free tax relief evaluation/consultation.</h4>
+		<div class="row">
+			<div class="col-md-4 text-center">First Name</div>
+			<div class="col-md-6"><input type="text" name="first_name" id="first_name" class="form-control"></div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-4 text-center">Last Name</div>
+			<div class="col-md-6"><input type="text" name="last_name" id="last_name" class="form-control" ></div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-4 text-center">Email</div>
+			<div class="col-md-6"><input type="email" name="email" id="email"  class="form-control" ></div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-4 text-center">Zip Code</div>
+			<div class="col-md-6"><input type="number" maxlength="5" minlength="5" name="zip" id="zip" class="form-control" ></div>
+		</div><br>
+		<div align="center" class="col-md-6 col-xs-12 col-sm-4 col-md-offset-3 " >
+			<center>
+		  <button type="button" onclick="check_3()" name="btnEvaluation" value="Get Evaluation">Get Evaluation</button>
+		  </center>
+		</div>
+
+
+		<script type="text/javascript">
+			function check_3(){
+				var name=document.getElementById("first_name").value;
+				var last=document.getElementById("last_name").value;
+				var email= document.getElementById("email").value;
+				var zip = document.getElementById("zip").value;
+				var n = zip.length;
+				if(name="" || email == "" || last==  "" || zip== "")
+				{
+					alert("Please fill the form completely");
+			       }
+			else{
+				       var x = document.getElementById("email").value;
+
+					    var atpos = x.indexOf("@");
+					    var dotpos = x.lastIndexOf(".");
+					    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+					         alert("Please enter a valid email");
+					    }
+					    else{
+					    	if(n < 5 || n > 5)
+					    	{
+					    		alert("Not a valid zip");
+					    	}
+					    	else{
+
+					    	 	 show_next_question('15','16');
+					    	}
+					    }
+
+			}
+		}
+
+		</script>
+	</div>
+	<input type="hidden" id="buyer" value="0">
+	<input type="hidden" id="qack" value="1">
+	<input type="hidden" id="trustedformcertur" value="trustedformCertURL">
+	<input type="hidden" id="leadsite" value="1">
+	<!-- Question 15 ends-->
+	<!-- Question 16 starts-->
+	<div id="div_question_16" class="row" style="display:none;">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div id="instruction" style="width:90%;margin:auto;border-radius: 20px;">
+			 <div class="row">
+		      <div class="col-9 col-sm-9 col-lg-9 col-xl-9 fpage-bluebox">
+				<b style="font-size: 25px;">Tax Case Evolution For :</b> <span id='full_name' style="font-size: 25px;"></span> <br>
+				<b  style="font-size: 25px;">Tax Agency :</b> <span  id='ag' style="font-size: 25px;"></span><br>
+				<b  style="font-size: 25px;">Tax Amount :</b> <span id='answer_question_13' style="font-size: 25px;"></span><br>
+			  </div>
+			  <div class="hidden-lg hidden-md"><br></div>
+			  <div class="col-3 col-sm-12 col-xs-12 col-lg-3 col-xl-3 text-center" style="min-height:100px;">
+				 <img src="bigstock.jpg" width="80%" height="100px">
+			  </div>
+			 </div>
+			</div>
+			<h3 style="font-family: 'Open Sans', sans-serif;"><b>OK. GOOD NEWS <span class="span_first"></span></b> You seem to be a good candidate for tax debt relief pragram. Please provide your phone number in the highlighted field yellow field below or Call 1-800-996-9102 in order to get your free tax case evolution/consultation.</b></h3>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 fpage_greenbox" >
+			    <h3 style="font-size: 18px;font-weight: bold;margin-top: 4px;"><img src="tick.png" width='30' height='35'>&nbsp;&nbsp;See What Tax Relief Option or Program You Can Persue</h3>
+				<h3  style="font-size: 18px;font-weight: bold;"><img src="tick.png" width='30' height='35' >&nbsp;&nbsp;See If You Qualify To Settle Tax for Less Than You Owe</h3>
+				<h3  style="font-size: 18px;font-weight: bold;"><img src="tick.png" width='30' height='35' >&nbsp;&nbsp;Understand Services Needed for Tax Compliance</h3>
+				<h3  style="font-size: 18px;font-weight: bold;"><img src="tick.png" width='30' height='35'>&nbsp;&nbsp;Get Cost Estimate & Potential Plan of Action for Relief</h3>
+            </div>
+
+			<div class="col-md-12 text-center" style="margin-top: 15px;">
+			  <span style="font-size:24px;"><b>Phone Number:</b></span>
+			 <div class="hidden-lg hidden-md"><br></div>
+			  <label></label>(<input type="number" name="phone" id="p1" size="3" maxlength="3" class="i1" style="border: 1px; solid white;height: 30px;width: 60px;">)-
+			  <input type="number" name="phone" id="p2" size="3" maxlength="3" class="i1" style="border: 1px; solid white;height: 30px;width: 60px;"> -
+			  <input type="number" name="phone" id="p3" size="3" maxlength="4" class="i1" style="border: 1px; solid white;height: 30px;width: 60px;">
+			</div>
+			<div align="center" class="col-md-12 col-xs-12 col-sm-12 p-5">
+		      <button type="button" class="button" style="text-transform: uppercase;" onclick="send_data()">Get Tax Relief Options & Quote</button>
+		    </div>
+
+			 <h6 style="clear:both;padding:10px 0px;">By clicking the "Get Quote" button, my submission is not an obligation of purchase & I waive any registration on the Do Not Call list. You also agree to be contacted (email, phone, sms) by one of our 3rd party tax partners in our network who specialize in resolving tax problems.</h6>
+			<div style="padding:25px 10px;">
+			<div class="col-lg-4 col-md-14 col-xs-12 col-sm-12 mx-auto text-center">
+			 <center><img src="logo1.jpg" class="img-responsive"></center>
+			</div>
+			<div class="col-lg-4 col-md-14 col-xs-12 col-sm-12 mx-auto;">
+			 <center><img src="logo2.jpg" class="img-responsive"></center>
+			</div>
+			<div class="col-lg-4 col-md-14 col-xs-12 col-sm-12 mx-auto;">
+			 <center><img src="logo3.png" class="img-responsive"></center>
+			</div>
+			</div>
+		</div><br>
+
+    </div>
+    <script type="text/javascript">
+    	var domain;
+    	var page;
+    	var path;
+    $(document).ready(function() {
+
+	$('.i1').each(function(n, el){
+		$(el).on('keyup',function(){
+			if( $(el).attr('maxlength') <= $(el).val().length ){
+				if ($(el).next().length) {
+					$(el).next().focus();
+				} else {
+					$($('.button')[0]).focus();
+				}
+			}
+		});
+	});
+
+    var url = window.location.href;  //www.myWebSite.com/myWebSite
+    var arr = url.split("/");
+    page = arr[arr.length-1];
+    domain = window.location.host;
+    path  = window.location.pathname;
+    var n = page.includes("?");     // if www.myWebSite.com/myWebSite?parameter
+	if(n)
+	{
+	var page_arr = page.split("?");
+     page = page_arr[0];        //myWebSite
+	}
+
+		});
+    </script>
+    <script type="text/javascript">
+    	function send_data(){
+
+    		var p1= document.getElementById("p1").value;
+    		var p2= document.getElementById("p2").value;
+    		var p3= document.getElementById("p3").value;
+    		var pl1 = p1.length;
+    		var pl2 = p2.length;
+    		var pl3 = p3.length;
+    		if(p1 == "" || p2 == "" || p3 == "")
+    		{
+    			alert("Please enter phone number");
+    		}
+    		else{
+    			if(pl1 < 3 || pl2 < 3 || pl3  < 4 || pl1  > 3|| pl2  > 3 || pl3  > 4)
+    			{
+    				alert("Please enter a valid number");
+    			}
+    			else{
+
+
+				var checkBoxValues= $("[name=question_1\\[\\]]").map(function() {
+				  if ($(this).is(':checked')) {
+					return this.value;
+				  }
+				}).get().join();
+				var question2= question_2;
+				var question3= question_3;
+				var checkBoxValues1= $("[name=question_4\\[\\]]").map(function() {
+				  if ($(this).is(':checked')) {
+					return this.value;
+				  }
+				}).get().join();
+				var question5= question_5;
+				var question6= question_6;
+				var question7= question_7;
+				var question8= question_8;
+				var question9= question_9;
+				var question10= question_10;
+				var question11= question_11;
+				var question12= question_12;
+				var question13= document.getElementById("question_13").value;
+				var question14= question_14;
+				var first=document.getElementById("first_name").value;
+				var last=document.getElementById("last_name").value;
+				var email=document.getElementById("email").value;
+				var zip=document.getElementById("zip").value;
+				var buyer=document.getElementById("buyer").value;
+				var qack=document.getElementById("qack").value;
+				var trustedformcertur=document.getElementById("trustedformcertur").value;
+				var leadsite=document.getElementById("leadsite").value;
+				var domain_name= domain;
+				var page_name= page;
+				var path_name= path;
+
+				var leadNotesC = {
+					'What Caused You To Accumulate Tax Debt?': checkBoxValues,
+					'Do You Need Business Tax Debt or Personal Tax Debt Relief?': question3,
+					'What Are You Most Concerned About With Your Tax Debt Situation?': checkBoxValues1,
+					'Do You Have Unfiled Tax Returns?': question5,
+					'Can You Pay Your Tax Debt In Full?': question6,
+					'Do You Have Money In Bank Accounts or Retirement Accounts You Need Protected?': question7,
+					'Have you experienced aggressive collection actions (this includes tax liens, bank levies, or garnishment)?': question8,
+					'Has Sent You Certified Collection Letters or Notices?': question9,
+					'Do You Want to Reduce or Abate Tax Penalties?': question10,
+					'Are You Currently In Bankruptcy?': question11,
+					'Do You Already Have a Payment Plan With That’s Unaffordable?': question12,
+					'Do You Want to Find Out What Tax Relief Programs You Qualify For?': question14
+				}
+
+				var dataToPost = {
+					lead_notes_c: JSON.stringify(leadNotesC),
+					tax_agency_c: question2,
+					tax_debt_amount_c: question13,
+					first_name: first,
+					last_name: last,
+					email1: email,
+					zip: zip,
+					buyer: buyer,
+					qack: qack,
+					trustedformcertur: trustedformcertur,
+					lead_site: leadsite,
+					phone_area: p1,
+					phone_pre: p2,
+					phone_number: p3,
+					page: page_name,
+					path: path_name,
+					url_success: "Thank_You",
+					type_id: "Short",
+					lead_source_description: domain_name,
+					ajax: 1
+				};
+
+				$.ajax({
+					type: "POST",
+					url: '/working_module/capture.php',
+					data: dataToPost,
+					dataType: "formdata",
+					crossDomain: true,
+					statusCode: {
+						302: function(data, textStatus, request){
+							console.log(data);
+							console.log(textStatus);
+							console.log(request);
+							console.log('test_data_123');
+						}
+					},
+					success: function(data, textStatus, request) {
+						if (302 == request.getResponseHeader('status')) {
+							// data.redirect contains the string URL to redirect to
+							window.location.href = request.getResponseHeader('location');
+						}
+						else {
+							// data.form contains the HTML for the replacement form
+							// $("#myform").replaceWith(data.form);
+						}
+					},
+					complete: function(xhr, textStatus){
+						if (xhr.status == 302) {
+							window.location.href = xhr.getResponseHeader("location");
+						} else {
+							if (undefined != JSON.parse(xhr.responseText).redirect) {
+								window.location.href = JSON.parse(xhr.responseText).redirect;
+							}
+						}
+					}
+				}).done(function(){
+					console.log(this);
+				});
+    		}
+
+
+        }
+
+    	}
+    </script>
+	<!-- Question 16 ends-->
+	<div id="div_success" class="container" style="">
+		<div class="row">
+	  <div class="col-md-12 col-xs-12 col-sm-12">
+	  	<br>
+	  	<center>
+		<img src="./tick.gif" width="240" height="180">
+		</center>
+	  </div>
+	</div>
+</div>
+ </div>
+</div>
+
+
+
+<script>
+$(document).ready()
+{
+	//$(tooltiparea).text("");
+};
+var width = 6.68;
+
+function show_next_question(current, next){
+
+	$('#div_success').show();
+	$('#instruction').hide();
+	$('#div_question_'+current).css('display','none')
+	setTimeout(function(){
+		$('#div_success').hide();
+		$('#div_question_'+current).hide(200)
+		$('#div_question_'+next).show();
+
+		if(next == 3){
+			 var question_2 = $('input:radio[name="question_2"]:checked').val();
+			 if(question_2 == 'IRS'){
+				$('#answer_8').html('the IRS')
+				$('#answer_9').html('the IRS')
+				$('#answer_12').html('the IRS')
+				$('#answer_13').html('the IRS')
+			 }
+
+			 if(question_2 == 'State'){
+				$('#answer_8').html('the State')
+				$('#answer_9').html('the State')
+				$('#answer_12').html('the State')
+				$('#answer_13').html('the State')
+			 }
+
+			 if(question_2 == 'Both IRS & State'){
+				$('#answer_8').html('the IRS or the State')
+				$('#answer_9').html('the IRS or the State')
+				$('#answer_12').html('the IRS or State')
+				$('#answer_13').html('the IRS or State')
+			 }
+		}
+		if(current == 15){
+			var question_2 = $('input:radio[name="question_2"]:checked').val();
+			$('#full_name').html($('#first_name').val()+' '+$('#last_name').val())
+			$('#span_email').html($('#email').val())
+			$('.span_first').html($('#first_name').val())
+			$('#span_last').html($('#last_name').val())
+			$('#span_zip').html($('#zip').val())
+
+
+			$('#answer_question_13').html($('#question_13').val())
+
+
+
+
+		}
+		if(current != 15)
+			move();
+
+    }, 1500);
+
+}
+
+function show_error(){
+	$('#error').show()
+}
+
+function move() {
+  var elem = document.getElementById("myBar");
+  width = width+6.8;
+  elem.style.width = width + '%';
+
+}
+</script>
+</body>
+</html>
