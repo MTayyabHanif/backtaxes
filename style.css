@@ -2564,7 +2564,7 @@ footer.main-footer {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     padding: 2rem;
     border-radius: 8px;
-    max-width: 42rem; }
+    max-width: 46rem; }
     @media (max-width: 768px) {
       .modal .modal__inner {
         padding: 0;

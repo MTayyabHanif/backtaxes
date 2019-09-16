@@ -177,7 +177,7 @@ body:before {
 	position: relative;
 	display: block;
 	margin: 2px 0 0;
-	padding: 10px 0;
+	padding: 2px 0;
 }
 .form-wrapper form label input[type="radio"] {
 	position: relative;
@@ -564,4 +564,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 b, strong, label{
 	font-weight: 500;
+}
+@media (max-width: 550px){
+	.top-header:not(.for-mobile){
+		display: none;
+	}
+}
+@media (min-width: 550px){
+	.top-header.for-mobile{
+		display: none;
+	}
 }
