@@ -479,10 +479,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .answer label input[type=checkbox]{
-	display: inline-block
-	/* line-height: 1.25; */
-	/* padding:10px 0; */
-	/* margin-right:15px; */
+	display: inline-block;
 }
 .answer label{display:block !important}
 
@@ -527,7 +524,7 @@ input[type=number]::-webkit-outer-spin-button {
 		border-radius: 3px;
 		border-top: 1px solid #F7F7F7;
 		border-right: 1px solid #999999;
-		border-bottom: 1px solid: #BABABA;
+		border-bottom: 1px solid #BABABA;
 		border-left: 1px solid #BDBDBD;
 		background-image: -webkit-gradient(
 			linear, left top, left bottom,
@@ -574,4 +571,7 @@ b, strong, label{
 	.top-header.for-mobile{
 		display: none;
 	}
+}
+@media (max-width: 765px){
+	.top-header ul{list-style:none;font-size: 15px;margin:0px;padding: 0px;}
 }

@@ -1,0 +1,379 @@
+@charset "UTF-8";
+@import url("//hello.myfonts.net/count/39f39b");
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+   font-family: 'Marcher';
+   font-weight: 400;
+   src: url("assets/fonts/Marcher/39F39B_0_0.eot");
+   src: url("assets/fonts/Marcher/39F39B_0_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Marcher/39F39B_0_0.woff2") format("woff2"), url("assets/fonts/Marcher/39F39B_0_0.woff") format("woff"), url("assets/fonts/Marcher/39F39B_0_0.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'Marcher';
+   font-weight: 500;
+   src: url("assets/fonts/Marcher/39F39B_1_0.eot");
+   src: url("assets/fonts/Marcher/39F39B_1_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Marcher/39F39B_1_0.woff2") format("woff2"), url("assets/fonts/Marcher/39F39B_1_0.woff") format("woff"), url("assets/fonts/Marcher/39F39B_1_0.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'Marcher';
+   font-weight: 600;
+   src: url("assets/fonts/Marcher/39F39B_2_0.eot");
+   src: url("assets/fonts/Marcher/39F39B_2_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Marcher/39F39B_2_0.woff2") format("woff2"), url("assets/fonts/Marcher/39F39B_2_0.woff") format("woff"), url("assets/fonts/Marcher/39F39B_2_0.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'Marcher';
+   font-weight: 800;
+   src: url("assets/fonts/Marcher/39F39B_3_0.eot");
+   src: url("assets/fonts/Marcher/39F39B_3_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Marcher/39F39B_3_0.woff2") format("woff2"), url("assets/fonts/Marcher/39F39B_3_0.woff") format("woff"), url("assets/fonts/Marcher/39F39B_3_0.ttf") format("truetype");
+}
+#myProgress {
+   width:95%;
+   margin:10px auto;
+   height:5px;
+   border-radius:25px;
+   background-color:#2B97A1;
+   background-color: #2B97A1;
+   background-color: #55D6BE;
+}
+#myBar {
+   width: 6.6%;
+   height: 5px;
+   border-radius:20px;
+   background-color: #3C5693;
+}
+h3
+{
+   font-family:'Marcher',sans-serif;
+}
+h4{
+   font-size:1.375rem;
+   font-weight:600;
+   text-align:center;
+   width:95%;
+   margin:auto;
+   font-family: 'Marcher', Arial, sans-serif;
+}
+
+h5{
+   font-weight:500;
+   color:rgba(0,0,0,0.8);
+   text-align:center;
+   font-size:0.8125rem;
+   clear:both;
+   margin-top:60px;
+   font-family: 'Marcher', Arial, sans-serif;
+}
+
+.answer{
+   font-weight:400;
+   margin-top:3%;
+   font-family:'Marcher',sans-serif;
+}
+.answerbutton
+{
+   text-align: center;
+   width:90%;
+   padding:15px 0px;
+   background:#FFD07B!important;
+   text-align:center;
+   color:#3D4451!important;
+   display:block!important;
+   font-weight:600;
+   outline:none;
+}
+.error
+{
+   width:90%;
+   margin:auto;
+   min-height:80px;
+   padding:20px 5px;
+   background:#82adf67d;
+   color:black;
+   font-size:1.125rem;
+   font-weight:700;
+   text-align:center;
+}
+.error a{font-size:1.150rem;}
+#div_success
+{
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   display:none;
+   text-align:center;
+   position:absolute;
+}
+html {
+   box-sizing: border-box;
+   font-family: 'Marcher', sans-serif;
+   font-size: 1.125rem;
+   font-weight: 400;
+   box-sizing: border-box;
+}
+
+*, *::after, *::before {
+   box-sizing: inherit;
+}
+
+body {
+   font-size: 1rem;
+   font-weight: 400;
+   box-sizing: border-box;
+   /* background: rgb(238, 238, 238); */
+   background-color: #F6FEFF;
+   background-color: #F0F8F9;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position:center;
+   height:100%;
+}
+body:before {
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.form-wrapper {
+   display: block;
+   /*Jayesh: Width of question area; 400px*/
+   min-height:350px;
+   margin: 0 auto;
+   padding: 30px;
+   border-radius: 5px;
+   /* background-image: url("taxpros_contactform.jpg"); */
+   background-size:cover;
+   background-position:center;
+   background-repeat:none;
+   background-color:#F6FEFF;
+   background-color: #F0F8F9;
+   /* box-shadow: 0 0 45px rgba(0,0,0,0.5); */
+   overflow:scroll-y;
+}
+.form-wrapper p {
+   font-size: 0.815rem;
+   line-height: 1.75;
+}
+.form-wrapper form {
+   position: relative;
+   display: block;
+   margin: 0;
+   padding: 2px;
+}
+.form-wrapper form label {
+   position: relative;
+   display: block;
+   margin: 2px 0 0;
+   padding: 2px 0;
+}
+
+.button, .form-wrapper button {
+   position: relative;
+   display: block;
+   margin: 15px auto;
+   text-align: center;
+   padding: 10px 50px;
+   font-size: 0.875rem;
+   font-weight: 400;
+   letter-spacing: 1px;
+   color: white;
+   border: none;
+   background-color: #2D4888;
+   z-index: 0;
+   transition: box-shadow .2s ease-in-out;
+   border-radius: 2px;
+}
+.form-wrapper button:before {
+   position: absolute;
+   content: '';
+   bottom: 0;
+   left: 0;
+   height: 0;
+   background-color: #EB6E44;
+   border-radius: 5px;
+   transition: height, 250ms ease;
+   z-index: -1;
+}
+
+.form-wrapper  button:hover {
+   box-shadow: 0 0 10px rgba(34, 34, 34, 0.3);
+   box-shadow: 0px 5px 12px rgba(48, 44, 42, 0.2);
+}
+.form-wrapper  button:hover:before {
+   height: 100%;
+}
+.form-wrapper  button:active {
+   outline:none;
+}
+
+/*2nd.htm CSS work*/
+
+/* Radio button for secondary option */
+/*Final page css*/
+.form-wrapper .fpage-bluebox{
+   min-height:80px;padding:10px;
+   background:#CEE3FF;
+   border-radius:15px;
+   box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.fpage_greenbox
+{
+   min-height:30px;
+   padding:10px;
+   margin-top:10px;
+   background:#DFFCE6;
+   box-shadow: 0 0 5px rgba(0,0,0,0.5);
+   border-radius:20px;
+}
+.fpage_greenbox h3
+{
+   font-size:22px;
+   margin-top:-5px;
+   font-family: 'Marcher', Arial, sans-serif;
+}
+.i1
+{
+   background:yellow;
+   outline:none;
+}
+.instruction p{
+   line-height:16px;
+   font-size:0.95rem;
+   font-family: 'Marcher', sans-serif;
+   font-weight: 400;
+}
+.instruction ul li{
+   font-weight:400;
+   font-size:1rem;
+   font-family:'Marcher',sans-serif;
+}
+.fpage-bluebox span{
+   font-family: 'Marcher', sans-serif;
+   border-radius: 0px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/*Ahsan added Styles*/
+.todo-icon{
+   width: 100px;
+   display:block;
+   position: relative;
+}
+.todo-icon-mobile{
+   width: 70px;
+   height: auto;
+   margin: 0 auto;
+   display:block;
+   position: relative;
+}
+@media screen and (max-width: 768px) {
+   .todo-icon-mobile{
+      margin-bottom: 24px;
+   }
+}
+
+.answer label input[type=checkbox]{
+   display: inline-block;
+}
+.answer label{display:block !important}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+
+   input[type=checkbox] {
+      outline: none;
+      width: 58px;
+      height: 23px;
+      font-size: 11px;
+      line-height: 2;
+      display: block !important;
+      font-weight: bold;
+      border-radius: 3px;
+      border: 1px solid #B9B9B9;
+      -webkit-appearance: none;
+
+      background-image: -webkit-gradient(
+         linear, left top, left bottom,
+         color-stop(0, #E8E8E8),
+         color-stop(0.5, #E8E8E8)
+         );
+      box-shadow: 0px 1px 2px #AFAFAF inset;
+      color: #7F7F7F;
+   }
+
+   input[type=checkbox]:checked {
+      background-image: -webkit-gradient(
+         linear, left top, left bottom,
+         color-stop(0, #3C5693),
+         color-stop(0.5, #3C5693)
+         );
+      box-shadow: 0px 1px 2px #1449A3 inset;
+      color: #fff;
+      text-shadow: 0px -1px 1px #000;
+      border: 1px solid #99B9E8;
+   }
+
+   input[type=checkbox]:before {
+      content: 'NO';
+      border-radius: 3px;
+      border-top: 1px solid #F7F7F7;
+      border-right: 1px solid #999999;
+      border-bottom: 1px solid #BABABA;
+      border-left: 1px solid #BDBDBD;
+      background-image: -webkit-gradient(
+         linear, left top, left bottom,
+         color-stop(0, #D8D8D8),
+         color-stop(1, #FBFBFB)
+         );
+      height: 20px;
+      width: 22px;
+      display: inline-block;
+      text-indent: 27px;
+   }
+
+   input[type=checkbox]:checked:before {
+      content: 'YES';
+      text-indent: -29px;
+      margin-left: 33px;
+   }
+
+
+   .checkOptions{
+      /* display: block; */
+      margin-bottom:16px;
+   }
+
+   .answer label{
+      /* border:1px solid #CCC; */
+      margin-bottom:6px !important;
+      display: inline-block;
+      margin-bottom:16px;
+      line-height: 1.25;
+      padding:16px 0;
+   }
+
+}
+b, label{
+   font-weight: 500;
+}
+@media (max-width: 550px){
+   .top-header:not(.for-mobile){
+      display: none;
+   }
+}
+@media (min-width: 550px){
+   .top-header.for-mobile{
+      display: none;
+   }
+}
+@media (max-width: 765px){
+  .top-header ul{list-style:none;font-size: 15px;margin:0px;}
+}
