@@ -175,6 +175,15 @@ select.disabled {
 .form-item label{
 	font-size: 15px;
 }
+.form-item{
+	.inline-fields {
+		display: inline-flex;
+		input {
+			height: 32px;
+			margin: 0 4px;
+		}
+	}
+}
 
 
 

@@ -562,6 +562,10 @@ input[type=number]::-webkit-outer-spin-button {
 b, strong, label{
 	font-weight: 500;
 }
+.question_form_15 {
+    max-width: 640px;
+    margin: 0 auto;
+}
 @media (max-width: 550px){
 	.top-header:not(.for-mobile){
 		display: none;

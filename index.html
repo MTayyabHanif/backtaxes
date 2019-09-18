@@ -394,19 +394,19 @@
 								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 									<div class="form-item">
 										<label>First Name</label>
-										<input type="text" name="firstname" required>
+										<input type="text" name="first_name" required>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 									<div class="form-item">
 										<label>Your Email</label>
-										<input type="email" name="message" required>
+										<input type="email" name="email1" required>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 									<div class="form-item">
 										<label>Last Name</label>
-										<input type="text" name="lastname" required>
+										<input type="text" name="last_name" required>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -430,7 +430,12 @@
 								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 									<div class="form-item">
 										<label>Phone Number</label>
-										<input type="text" id="phone_number" name="phone-number" required>
+										<div class="inline-fields">
+										(<input type="text" name="phone_area" maxlength="3" required>)
+										<input type="text" name="phone_pre" maxlength="3" required>
+										-
+										<input type="text" name="phone_number" maxlength="4" required>
+										</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
