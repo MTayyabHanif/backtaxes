@@ -178,11 +178,42 @@
 
 // QUESTIOSN FORM IFRAME for mobile
 .questionsform{
-	overflow: hidden;
 	background-color: #F0F8F9;
-	text-align: center;
-	margin-top: -5rem;
-	padding-top: 5rem;
+	margin-top: -8rem;
+	padding-top: 104px;
+
+	.questionsform__wrap--title{
+		text-align: center;
+		h2{
+			margin-top: 6px;
+			text-transform: uppercase;
+			margin-bottom: 6px;
+			font-weight: 500;
+			@include fontsize(20px);
+			@include lineheight(20px, 28px);
+		}
+	}
+	.form-item {
+		padding: 0.6rem 0;
+		label{
+			@extend .text-20;
+			margin-bottom: 5px;
+			color: #616367;
+		}
+	}
+	button{
+		box-shadow: 0 10px 20px 0 rgba(59, 89, 152, 0.35);
+		background-color: $secondary;
+		color: #fff;
+		padding-left: 0;
+		padding-right: 0;
+		&:hover{
+			color: #fff;
+			background-color: $secondary;
+			box-shadow: 0 4px 8px 0 rgba(59, 89, 152, 0.35)
+		}
+	}
+
 	iframe{
 		@media (max-width: 768px){
 			height: 780px;
@@ -203,7 +234,7 @@
 	text-align: center;
 	margin-top: -5rem;
 	@media (max-width: 765px){
-		margin-top: 0;
+		margin-top: -2rem;
 	}
 	.brands__wrapper{
 		text-align: center;

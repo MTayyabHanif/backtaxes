@@ -101,7 +101,7 @@ select {
 	outline: none;
 	vertical-align: middle;
 	background-color: $white;
-	border: 1px solid $color-lightgray;
+	border: solid 1px #c6dbdd;
 	border-radius: 3px;
 	box-shadow: none;
 	padding: 0 12px;
@@ -178,8 +178,9 @@ select.disabled {
 .form-item{
 	.inline-fields {
 		display: inline-flex;
+		line-height: 48px;
 		input {
-			height: 32px;
+			// height: 32px;
 			margin: 0 4px;
 		}
 	}
