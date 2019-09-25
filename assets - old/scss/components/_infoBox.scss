@@ -1,0 +1,15 @@
+.infoBox{
+   margin: 8px 0;
+
+   .infoBox__content{
+      padding: 1rem;
+      border-radius: 2px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      border: solid 2px #2b97a1;
+      color:  #007c89;
+      p{
+         @include fontsize(18px);
+         @include lineheight(18px, 24px);
+      }
+   }
+}

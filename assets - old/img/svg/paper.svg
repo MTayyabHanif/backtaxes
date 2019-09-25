@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.24" height="35.6" viewBox="0 0 32.24 35.6">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#fff;stroke-linecap:square;stroke-miterlimit:10;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="paper" transform="translate(1 1)">
+        <path id="Path_33" d="M28.76 24.52V1H3v30.24a3.36 3.36 0 0 0 3.36 3.36H8.6" class="cls-1" data-name="Path 33" transform="translate(-3 -1)"/>
+        <path id="Path_34" d="M9.36 28.24A3.36 3.36 0 0 1 6 31.6h23.52a3.36 3.36 0 0 0 3.36-3.36V26H9.36z" class="cls-1" data-name="Path 34" transform="translate(-2.64 2)"/>
+        <path id="Line_13" d="M0 0h12.32" class="cls-1" data-name="Line 13" transform="translate(6.72 6.72)"/>
+        <path id="Line_14" d="M0 0h12.32" class="cls-1" data-name="Line 14" transform="translate(6.72 13.44)"/>
+        <path id="Line_15" d="M0 0h12.32" class="cls-1" data-name="Line 15" transform="translate(6.72 20.16)"/>
+    </g>
+</svg>

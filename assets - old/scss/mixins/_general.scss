@@ -1,0 +1,56 @@
+/**
+ * Convert font-size from px to rem with px fallback
+ *
+ * @param $size - the value in pixel you want to convert
+ *
+ * e.g. p {@include fontSize(12px);}
+ *
+ */
+
+// Function for converting a px based font-size to rem.
+@function rem($size) {
+	$remSize: $size / 18px;
+	//Default font size on html element is 100%, equivalent to 16px;
+	@return #{$remSize}rem;
+}
+// Function for converting px based lineheight to unitless
+@function lineheight($font-size, $line-height) {
+   @return $line-height / $font-size;
+}
+
+
+// blur
+@mixin blur($radius) {
+	-webkit-filter: blur($radius);
+	-moz-filter: blur($radius);
+	-ms-filter: blur($radius);
+	filter: blur($radius);
+}
+
+// blur
+@mixin fontsize($size) {
+	font-size: $size;
+	font-size: rem($size);
+}
+
+@mixin lineheight($font-size, $line-height) {
+	line-height: $line-height;
+	line-height: lineheight($font-size, $line-height);
+}
+
+
+// Buttons
+@mixin buttons-font($font) {
+	button, .button {
+		font-family: #{$font};
+	}
+}
+
+
+
+// Inputs
+@mixin inputs-font($font) {
+	input, textarea, select {
+		font-family: #{$font};
+	}
+}

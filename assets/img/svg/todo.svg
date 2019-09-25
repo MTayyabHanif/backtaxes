@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.6" height="49" viewBox="0 0 39.6 49">
+  <g id="todo" transform="translate(-3 17)">
+    <path id="Path_91" data-name="Path 91" d="M24.1,5.7a4.7,4.7,0,0,0-9.4,0H10v6.267H28.8V5.7Z" transform="translate(3.4 -17)" fill="none" stroke="#2d4888" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_92" data-name="Path 92" d="M36.9,5h4.7V45.733H4V5H8.7" transform="translate(0 -14.733)" fill="none" stroke="#3c5693" stroke-miterlimit="10" stroke-width="2"/>
+    <g id="check-list" transform="translate(5.855 -2.867)">
+      <path id="Path_93" data-name="Path 93" d="M25.444,9.887H40.529a.444.444,0,1,0,0-.887H25.444a.444.444,0,1,0,0,.887Z" transform="translate(-11.683 -3.338)" fill="#c9cfd9"/>
+      <path id="Path_94" data-name="Path 94" d="M40.529,31H25.444a.444.444,0,1,0,0,.887H40.529a.444.444,0,0,0,0-.887Z" transform="translate(-11.683 -15.577)" fill="#d5dbe6"/>
+      <path id="Path_95" data-name="Path 95" d="M40.529,53H25.444a.444.444,0,0,0,0,.887H40.529a.444.444,0,0,0,0-.887Z" transform="translate(-11.683 -27.816)" fill="#c9cfd9"/>
+      <rect id="Rectangle_86" data-name="Rectangle 86" width="6" height="6" rx="1" transform="translate(4.145 2.867)" fill="#55d6be"/>
+      <rect id="Rectangle_87" data-name="Rectangle 87" width="6" height="6" rx="1" transform="translate(4.145 22.867)" fill="#55d6be"/>
+      <path id="Path_96" data-name="Path 96" d="M10.747,23.175,6.618,28.541l-1.86-1.861a.444.444,0,1,0-.627.627l2.218,2.218a.444.444,0,0,0,.314.13H6.69a.444.444,0,0,0,.323-.173l4.437-5.768a.444.444,0,1,0-.7-.54Z" transform="translate(0 -11.127)" fill="#2b97a1"/>
+    </g>
+  </g>
+</svg>

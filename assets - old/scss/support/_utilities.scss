@@ -1,0 +1,421 @@
+/*
+
+Utilities
+
+These utility classes have one or two CSS properties that are meant to save you from creating several identical classes to do the same thing, like just centering some text.
+
+Markup:
+<div class="{{modifier_class}}" >
+	Example Text
+</div>
+
+.disabled                	- Disable an Element
+.smooth                 	- Smoothed font rendering
+
+.f-none                   	- float: none;
+.f-left                		- float: left;
+.f-center                	- margin-left: auto;  margin-right: auto;
+.f-right                 		- float: right;
+.clearfix                		- Clear floats to keep the parent container in shape
+
+.med-width                	- max-width  980px
+.large-width                	- max-width  1180px
+.full-width                	- width & max width 100%
+.max-full-width           	-  max width 100%
+
+.display-block             	- block
+.display-inlineBlock       - inline-block
+.display-inline               	- inline
+.display-none              	- none
+
+.uppercase             	- text transform uppercase
+
+.align-left                 	- text-align: left;
+.align-center               	- text-align: center;
+.align-right                	- text-align: right;
+
+.hide-mobile		- hidden after 64em
+.hide-desktop 		- hidden before 64em
+
+Styleguide 4.0
+
+*/
+
+.disabled{
+	cursor: default;
+	opacity: .5;
+	pointer-events: none;
+}
+
+.smooth{
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+.push-center{
+	margin-left: auto;
+	margin-right: auto;
+}
+.f-none{
+	float: none;
+}
+
+.f-left{
+	float: left;
+}
+.f-center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.f-right{
+	float: right;
+}
+
+.clearfix{
+	clear: both;
+	overflow: hidden;
+	&:after{
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+.overflow-hidden{
+	overflow: hidden;
+}
+
+.med-width{
+	box-sizing: border-box;
+	max-width: 980px;
+	width: 100%;
+}
+.large-width{
+	box-sizing: border-box;
+	max-width: 1180px;
+	width: 100%;
+}
+.full-width {
+	box-sizing: border-box;
+	max-width: 100%;
+	width: 100%;
+}
+.max-full-width {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+.italic {
+	font-style: italic;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-inlineBlock {
+	display: inline-block;
+}
+.display-inline {
+	display: inline;
+}
+.display-none {
+	display: none;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-capitalize {
+	text-transform: capitalize;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+.align-left{
+	text-align: left;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.align-right{
+	text-align: right;
+}
+
+.align-justify{
+	text-align: justify;
+}
+
+.align-center-justify{
+	text-align: justify;
+	-moz-text-align-last: center;
+	text-align-last: center;
+}
+
+.position-fix{
+	position: fixed;
+}
+.position-abs{
+	position: absolute;
+}
+.position-rel{
+	position: relative;
+}
+.position-normal, .position-static{
+	position: static;
+}
+
+
+
+
+.hide-mobile {
+	display: none !important;
+}
+@media screen and (min-width: 765px) {
+	.hide-desktop { display: none !important;
+	}
+	.hide-mobile { display: block !important;
+	}
+}
+/*
+
+Type Utilities
+
+These are specific typography related utilities
+
+Markup:
+<div class="type {{modifier_class}}">
+	The quick brown fox jumps over the lazy dog.
+</div>
+
+.huge            			- Max Larger than the default font size
+.large            			- Larger than the default font size
+.medium or .base            - Exactly the default font size
+.small            			- Smaller than the default font size
+.tiny            			- Much smaller than the default font size
+
+.light            - Changes the type to be 300 weight
+.normal           - Changes the type to be 400 weight
+.semibold         - Changes the type to be 600 weight
+.bold             - Changes the type to be 700 weight
+
+
+.muted  	 		- Add muted color to text
+
+.black 			- Adds black color to text - more than #333
+.end 				- Remove margin bottom
+
+.highlight 			- Adds highlighting color to text
+
+.nowrap 			- No-wraps a
+.white-wrap		- white spaces shown
+
+
+*/
+
+
+
+.huge{
+	font-size: $font-size--huge;
+	line-height: 170%;
+}
+.large{
+	font-size: $font-size--large;
+	line-height: 180%;
+}
+.base, .medium{
+	font-size: $font-size--medium;
+}
+.small{
+	font-size: $font-size--small;
+	line-height: 180%;
+}
+.tiny{
+	font-size: $font-size--tiny;
+	line-height: 180%;
+}
+
+
+
+.light{
+	font-weight: 300;
+}
+
+.normal{
+	font-weight: 400;
+}
+
+.semibold{
+	font-weight: 500;
+}
+
+.bold{
+	font-weight: 800;
+}
+
+
+
+
+
+
+.muted {
+	opacity: .55;
+}
+
+a.muted {
+	color: #0d0d0e;
+}
+
+a.muted:hover {
+	opacity: 1;
+}
+
+.black {
+	color: #0d0d0e;
+}
+
+.end {
+	margin-bottom: 0 !important;
+}
+
+.highlight {
+	background-color: $color-highlight;
+}
+
+.nowrap,
+.nowrap td {
+	white-space: nowrap;
+}
+
+.white-wrap{
+	white-space: pre;
+	@media screen and (max-width: 640px) {
+		white-space: normal;
+	}
+}
+
+
+
+
+
+
+// Responsive video container
+.video-container {
+	height: 0;
+	padding-bottom: 56.25%;
+	position: relative;
+	margin-bottom: 16px;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Spacing
+//
+// Generating margins and paddings with and without breakpoints
+$mr-breakpoints: (
+	(sm, 768px),
+	(md, 992px),
+	(lg, 1200px)
+	);
+
+
+// Control the default styling of most Inject elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 8px !default;
+$spacers: (
+	0: 0,
+	($spacer * 1): ($spacer * 1),
+	($spacer * 2): ($spacer * 2),
+	($spacer * 3): ($spacer * 3),
+	($spacer * 4): ($spacer * 4),
+	($spacer * 5): ($spacer * 5),
+	($spacer * 6): ($spacer * 6),
+	($spacer * 7): ($spacer * 7),
+	($spacer * 8): ($spacer * 8),
+	($spacer * 9): ($spacer * 9),
+	($spacer * 10): ($spacer * 10),
+	($spacer * 11): ($spacer * 11),
+	($spacer * 12): ($spacer * 12),
+	($spacer * 13): ($spacer * 13),
+	($spacer * 14): ($spacer * 14),
+	($spacer * 15): ($spacer * 15),
+	($spacer * 16): ($spacer * 16),
+	($spacer * 17): ($spacer * 17),
+	($spacer * 18): ($spacer * 18),
+	($spacer * 19): ($spacer * 19),
+	($spacer * 20): ($spacer * 20)
+	) !default;
+
+
+//generatinng margins and paddings outside from breakfpoint for XS and global
+@each $prop, $abbrev in (margin: m, padding: p) {
+	@each $val, $length in $spacers {
+		.#{$abbrev}-#{$val} {
+			#{$prop}: $length !important;
+		}
+		.#{$abbrev}t-#{$val}{
+			#{$prop}-top: $length !important;
+		}
+		.#{$abbrev}r-#{$val}{
+			#{$prop}-right: $length !important;
+		}
+		.#{$abbrev}b-#{$val}{
+			#{$prop}-bottom: $length !important;
+		}
+		.#{$abbrev}l-#{$val}{
+			#{$prop}-left: $length !important;
+		}
+	}
+}
+@each $val in $mr-breakpoints {
+	$col: nth($val, 1);
+	$size: nth($val, 2);
+
+	@media only screen and (min-width: #{$size}) {
+		@each $prop, $abbrev in (margin: m, padding: p) {
+			@each $val, $length in $spacers {
+
+				.#{$abbrev}-#{$col}-#{$val} {
+					#{$prop}: $length !important;
+				}
+				.#{$abbrev}t-#{$col}-#{$val}{
+					#{$prop}-top: $length !important;
+				}
+				.#{$abbrev}r-#{$col}-#{$val}{
+					#{$prop}-right: $length !important;
+				}
+				.#{$abbrev}b-#{$col}-#{$val}{
+					#{$prop}-bottom: $length !important;
+				}
+				.#{$abbrev}l-#{$col}-#{$val}{
+					#{$prop}-left: $length !important;
+				}
+			}
+		}
+	}
+}

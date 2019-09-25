@@ -5586,3 +5586,454 @@ main .heading {
         columns: 2;
         margin: 0;
         padding: 0; }
+
+/*----------  MODULE  ----------*/
+#question_modal {
+  /*2nd.htm CSS work*/
+  /* Radio button for secondary option */
+  /*Final page css*/
+  /*Ahsan added Styles*/
+  /* On screens that are 600px or less, set the background color to olive */ }
+  #question_modal input[type="radio"]:focus {
+    outline: none; }
+  #question_modal #myProgress {
+    width: 95%;
+    margin: 10px auto;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #2B97A1;
+    background-color: #2B97A1;
+    background-color: #55D6BE; }
+  #question_modal #myBar {
+    width: 6.6%;
+    height: 5px;
+    border-radius: 20px;
+    background-color: #3C5693; }
+  #question_modal h3 {
+    font-family: 'Marcher',sans-serif; }
+  #question_modal h4 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    text-align: center;
+    width: 95%;
+    margin: auto;
+    font-family: 'Marcher', Arial, sans-serif; }
+  #question_modal h5 {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 0.8125rem;
+    clear: both;
+    margin-top: 0px;
+    font-family: 'Marcher', Arial, sans-serif;
+    display: block;
+    width: 100%; }
+  #question_modal .answer {
+    font-weight: 400;
+    margin-top: 3%;
+    font-family: 'Marcher',sans-serif; }
+  #question_modal .answerbutton_wrap {
+    max-width: 320px;
+    margin: 0 auto; }
+    #question_modal .answerbutton_wrap > center:first-child {
+      margin-top: 15px; }
+  #question_modal .answerbutton {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0px;
+    background: #FFD07B !important;
+    text-align: center;
+    color: #3D4451 !important;
+    display: block !important;
+    font-weight: 600;
+    outline: none;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important; }
+  #question_modal .error {
+    width: 90%;
+    margin: auto;
+    min-height: 80px;
+    padding: 20px 5px;
+    background: #82adf67d;
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center; }
+  #question_modal .error a {
+    font-size: 1.150rem; }
+  #question_modal #div_success {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+    position: absolute; }
+  #question_modal .form-wrapper {
+    display: block;
+    /*Jayesh: Width of question area; 400px*/
+    min-height: 350px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 5px;
+    /* background-image: url("taxpros_contactform.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    background-color: #F6FEFF;
+    background-color: #F0F8F9;
+    /* box-shadow: 0 0 45px rgba(0,0,0,0.5); */
+    overflow: scroll-y; }
+  #question_modal .form-wrapper p {
+    font-size: 0.815rem;
+    line-height: 1.75; }
+  #question_modal .form-wrapper form {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 2px; }
+  #question_modal .form-wrapper form label {
+    position: relative;
+    display: block;
+    margin: 6px 0 0;
+    padding: 2px 0; }
+  #question_modal .form-wrapper form label input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    margin-top: 3px;
+    margin-right: 15px;
+    font-size: 0.75rem;
+    float: left;
+    z-index: 1; }
+  #question_modal .form-wrapper form label input[type="radio"]:checked + div span {
+    position: absolute;
+    display: inline-block;
+    left: 100%;
+    top: -5px;
+    margin: 0 0 0 20px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.2);
+    clear: both;
+    visibility: visible;
+    transform: translateX(0px);
+    transition: transform 200ms ease; }
+  #question_modal .form-wrapper form label input[type="radio"]:checked + div span:before {
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: -1px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(34, 34, 34, 0.9);
+    transform: rotate(45deg); }
+  #question_modal .form-wrapper form label div {
+    position: relative;
+    display: inline-block; }
+  #question_modal .form-wrapper form label div span {
+    position: absolute;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: transform 200ms ease; }
+  #question_modal .form-wrapper form label input[type="radio"]:checked + div span {
+    background-color: #000; }
+  #question_modal .form-wrapper form label input[type="radio"]:checked + div span:before {
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(0, 0, 0, 0.9); }
+  #question_modal .button, #question_modal [type=button],
+  #question_modal [type=submit],
+  #question_modal button, #question_modal .form-wrapper button {
+    position: relative;
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    padding: 10px 50px;
+    font-size: 0.875rem;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+    background-color: #2D4888;
+    z-index: 0;
+    transition: box-shadow .2s ease-in-out;
+    border-radius: 2px;
+    box-shadow: none; }
+    #question_modal .button:hover, #question_modal :hover[type=button],
+    #question_modal :hover[type=submit],
+    #question_modal button:hover, #question_modal .form-wrapper button:hover {
+      box-shadow: 0px 5px 12px rgba(48, 44, 42, 0.2); }
+  #question_modal .form-wrapper button:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 0;
+    background-color: #EB6E44;
+    border-radius: 5px;
+    transition: height, 250ms ease;
+    z-index: -1; }
+  #question_modal .form-wrapper button:hover {
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.3);
+    box-shadow: 0px 5px 12px rgba(48, 44, 42, 0.2); }
+  #question_modal .form-wrapper button:hover:before {
+    height: 100%; }
+  #question_modal .form-wrapper button:active {
+    outline: none; }
+  #question_modal .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: #CBD1D8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000; }
+  #question_modal .option-input:hover {
+    background: #9faab7; }
+  #question_modal .option-input:checked {
+    /* Jayesh: Radio button once checked*/
+    background: #0497FC; }
+  #question_modal .option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: '';
+    display: inline-block;
+    font-size: 1.6875rem;
+    text-align: center;
+    line-height: 40px; }
+  #question_modal .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100; }
+  #question_modal .option-input.radio {
+    border-radius: 50%; }
+  #question_modal .option-input.radio::after {
+    border-radius: 50%; }
+  #question_modal .option-input2 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: #CBD1D8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000; }
+  #question_modal .option-input2:hover {
+    background: #9faab7; }
+  #question_modal .option-input2:checked {
+    /* Jayesh: Radio button once checked*/
+    background: #28Af4E; }
+  #question_modal .option-input2:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: '';
+    display: inline-block;
+    font-size: 1.6875rem;
+    text-align: center;
+    line-height: 40px; }
+  #question_modal .option-input2:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100; }
+  #question_modal .option-input2.radio {
+    border-radius: 50%; }
+  #question_modal .option-input2.radio::after {
+    border-radius: 50%; }
+  #question_modal .form-wrapper .fpage-bluebox {
+    min-height: 80px;
+    padding: 10px;
+    background: #CEE3FF;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+  #question_modal .fpage_greenbox {
+    min-height: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    background: #DFFCE6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px; }
+  #question_modal .fpage_greenbox h3 {
+    font-size: 22px;
+    margin-top: -5px;
+    font-family: 'Marcher', Arial, sans-serif; }
+  #question_modal .i1 {
+    background: yellow;
+    outline: none; }
+  #question_modal .instruction p {
+    line-height: 16px;
+    font-size: 0.95rem;
+    font-family: 'Marcher', sans-serif;
+    font-weight: 400; }
+  #question_modal .instruction ul li {
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Marcher',sans-serif; }
+  #question_modal .watermark {
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    opacity: 0.3;
+    z-index: 0; }
+  #question_modal .fpage-bluebox span {
+    font-family: 'Marcher', sans-serif;
+    border-radius: 0px; }
+  #question_modal .heading_style {
+    background-color: #117494;
+    height: 100px;
+    color: white; }
+  #question_modal input[type=number]::-webkit-inner-spin-button,
+  #question_modal input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  #question_modal .todo-icon {
+    width: 100px;
+    display: block;
+    position: relative; }
+  #question_modal .todo-icon-mobile {
+    width: 70px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    position: relative; }
+  @media screen and (max-width: 768px) {
+    #question_modal .todo-icon-mobile {
+      margin-bottom: 24px; } }
+  #question_modal .answer label input[type=checkbox] {
+    display: inline-block; }
+  #question_modal .answer label {
+    display: block !important;
+    padding-left: 0; }
+  #question_modal #div_question_15 > .row {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 1rem; }
+  @media screen and (max-width: 600px) {
+    #question_modal input[type=checkbox] {
+      outline: none;
+      width: 58px;
+      height: 23px;
+      font-size: 11px;
+      line-height: 2;
+      display: block !important;
+      font-weight: bold;
+      border-radius: 3px;
+      border: 1px solid #B9B9B9;
+      -webkit-appearance: none;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E8E8E8), color-stop(0.5, #E8E8E8));
+      box-shadow: 0px 1px 2px #AFAFAF inset;
+      color: #7F7F7F; }
+    #question_modal input[type=checkbox]:checked {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3C5693), color-stop(0.5, #3C5693));
+      box-shadow: 0px 1px 2px #1449A3 inset;
+      color: #fff;
+      text-shadow: 0px -1px 1px #000;
+      border: 1px solid #99B9E8; }
+    #question_modal input[type=checkbox]:before {
+      content: 'NO';
+      border-radius: 3px;
+      border-top: 1px solid #F7F7F7;
+      border-right: 1px solid #999999;
+      border-bottom: 1px solid #BABABA;
+      border-left: 1px solid #BDBDBD;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D8D8D8), color-stop(1, #FBFBFB));
+      height: 20px;
+      width: 22px;
+      display: inline-block;
+      text-indent: 27px; }
+    #question_modal input[type=checkbox]:checked:before {
+      content: 'YES';
+      text-indent: -29px;
+      margin-left: 33px; }
+    #question_modal .checkOptions {
+      /* display: block; */
+      margin-bottom: 16px; }
+    #question_modal .answer label {
+      /* border:1px solid #CCC; */
+      margin-bottom: 6px !important;
+      display: inline-block;
+      margin-bottom: 16px;
+      line-height: 1.25;
+      padding: 16px 0; } }
+  #question_modal b, #question_modal strong, #question_modal label {
+    font-weight: 500; }
+  #question_modal .radio:before, #question_modal .checkbox:before,
+  #question_modal .radio__label:after, #question_modal .checkbox__label:after {
+    margin-top: -8px; }
+  #question_modal span.checkbox__label {
+    margin-left: 26px;
+    font-weight: 400;
+    color: #000; }
+  #question_modal .checkbox input[type=checkbox]:checked + .checkbox__label:after {
+    line-height: 15px;
+    color: #2d4888; }
+  #question_modal .radio input[type=radio]:focus + .radio__label:after, #question_modal .checkbox input[type=checkbox]:focus + .checkbox__label:after {
+    border-color: #2d4888; }
+  #question_modal .radio__label:after, #question_modal .checkbox__label:after {
+    height: 16px; }
+  #question_modal .question_form_15 {
+    max-width: 640px;
+    margin: 0 auto; }
+  @media (max-width: 550px) {
+    #question_modal .top-header:not(.for-mobile) {
+      display: none; } }
+  @media (min-width: 550px) {
+    #question_modal .top-header.for-mobile {
+      display: none; } }
+  @media (max-width: 765px) {
+    #question_modal .top-header ul {
+      list-style: none;
+      font-size: 15px;
+      margin: 0px;
+      padding: 0px; } }
+  #question_modal p {
+    margin: 0 0 10px; }

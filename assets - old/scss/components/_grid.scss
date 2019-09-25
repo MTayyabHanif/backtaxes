@@ -1,0 +1,283 @@
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+//**
+// 12 Column Responsive Grid
+/*
+Variables
+$fg-columns:    The number of columns you wnat your grid to be, defaults to 12
+$fg-gutter:     The gutter width used for each column, defaults to 0.5rem
+$fg-breakpoints:  The Flex Grid breakpoint object, binds grid namespaces to media queries. Read more about namespaces in the next section. Defaults to ((xs),(sm,768),(md,992px),(lg,1200px))
+$fg-class-row:   The class to use for rows, defaults to 'row'
+$fg-class-col:    The class to use for columns, defaults to 'col'
+$fg-class-off:    The class to use for offsets, defaults to 'off'
+Class Reference
+.($fg-class-row):     Flex box container, use this to wrap columns.
+.($fg-class-col)-(namespace):     This creates a column that will grow/shrink depending on available space in the defined namespace.
+.($fg-class-col)-(namespace)-(number):    This creates a column that span the specific number of columns in the defined namespace. Valid numbers are 1-12.
+.($fg-class-off)-(namespace)-(number):    This will offset a column by a specific number of columns in the defined namespace. Valid numbers are 1-11.
+See docs about the row, col and offset class name variables, default is 'row', 'col', 'off'.
+
+Default valid namespaces are xs, sm, md, lg. The xs namespace is default and uses no media queries.
+
+*/
+
+
+/**
+ * Grid setup
+ *
+ * The grid will calculate dimensions based on these two variables:
+ * $fg-columns will inform the grid loops how many columns there should be.
+ * $fg-gutter will inform the grid loops how big eac column's gutters should be.
+ *
+ * The grid will name columns, rows, offsets based on these three variables:
+ * $fg-class-row string used for the row class
+ * $fg-class-col string used for the column class
+ * $fg-class-off string used for the offset class
+ */
+ $fg-columns: 12 !default;
+ $fg-gutter: .6rem !default;
+
+ $fg-class-row: 'row' !default;
+ $fg-class-col: 'col' !default;
+ $fg-class-off: 'off' !default;
+
+
+ .container-fluid {
+ 	padding-right: 2rem;
+ 	padding-left: 2rem;
+ }
+
+ .container, .container-fluid {
+ 	margin-right: auto;
+ 	margin-left: auto;
+ }
+
+ .wrap {
+ 	box-sizing: border-box;
+ 	max-width: 1108px;
+ 	margin: 0 auto;
+ }
+
+
+/**
+ * Break point namespace object
+ *
+ * Set the default namespace object with these defaults with the
+ * understanding that you can pass in whatever you might require for your site.
+ *
+ * $fg-breakpoints is a Sass list with nested lists inside. Each sub list defines two things.
+ * 1. The namespace for that breakpoint. (Required) (i.e. xs, sm, md, lg)
+ * 2. The min-width measurement for the breakpoint for that namespace. (i.e. 48em, 62em, 75em)
+ *
+ * Note: These should be in the proper order (at least till libsass handles map keys properly).
+ *
+ * Note: If the measurement is left out then it will be skipped when generating
+ * the grid and applied to global styles.
+ *
+ */
+ $fg-breakpoints: (
+                   (xs),
+                   (sm, 768px),
+                   (md, 992px),
+                   (lg, 1200px)
+                   ) !default;
+
+/**
+ * Class Name Defaults
+ *
+ * Define class names for columns, rows and offsets in case compatibility with other
+ * libraries is necessary.
+/**
+ * Calculate column size percentage
+ */
+ @function get-col-percent($column-num) {
+
+ 	@return $column-num / $fg-columns * 100%;
+
+ }
+
+/**
+ * Spacing mixin to create uniform margin/padding
+ */
+ @mixin spacing( $value, $type: margin, $orientation: vertical ) {
+ 	@if $orientation == vertical {
+ 		#{ $type }-top: $value;
+ 		#{ $type }-bottom: $value;
+ 	} @else {
+ 		#{ $type }-left: $value;
+ 		#{ $type }-right: $value;
+ 	}
+ }
+
+/**
+ * Row wrapper class, flex box parent.
+ */
+ .#{ $fg-class-row } {
+ 	box-sizing: border-box;
+ 	display: flex;
+ 	flex-direction: row;
+ 	flex-wrap: wrap;
+ 	&.reverse{
+ 		-webkit-box-orient: horizontal;
+ 		-webkit-box-direction: reverse;
+ 		-ms-flex-direction: row-reverse;
+ 		flex-direction: row-reverse;
+ 	}
+ }
+ .#{ $fg-class-row }.with-gutter {
+ 	@include spacing( ( -$fg-gutter ), margin, horizontal );
+ }
+ .#{ $fg-class-row }.with-gutter > %#{ $fg-class-col }{
+ 	@include spacing( ( $fg-gutter ), padding, horizontal );
+ }
+ %#{ $fg-class-col } {
+ 	box-sizing: border-box;
+ 	display: flex;
+ 	flex-direction: column;
+ 	flex-grow: 0;
+ 	flex-shrink: 0;
+ 	min-height: 1px;
+ }
+
+ %#{ $fg-class-col }-flex {
+ 	@extend %#{ $fg-class-col };
+ 	flex-grow: 1;
+ 	flex-basis: 0;
+ 	max-width: 100%;
+ }
+
+
+/**
+ * Generate a set of grid column classes using a namespace
+ *
+ * .#{ $fg-class-col }-[namespace] for intelligent column division
+ * .#{ $fg-class-col }-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)
+ * .#{ $fg-class-off }-[namespace]-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)
+ * .#{ $fg-class-off }-[namespace]-reset for resetting a col's offset for that and larger namespaces
+ */
+
+ @mixin grid-base( $namespace ) {
+ 	.#{ $fg-class-col }-#{$namespace} {
+ 		@extend %#{ $fg-class-col }-flex;
+ 	}
+
+ 	@for $i from 1 through $fg-columns {
+ 		.#{ $fg-class-col }-#{$namespace}-#{$i} {
+ 			@extend %#{ $fg-class-col };
+ 		}
+ 	}
+ }
+
+ @mixin grid-sizes( $namespace ) {
+
+  // Run the loop for as many columns as speficied
+  @for $i from 1 through $fg-columns {
+  	.#{ $fg-class-col }-#{$namespace}-#{$i} {
+  		flex-basis: get-col-percent($i);
+  		max-width:  get-col-percent($i);
+  	}
+  }
+
+  @for $i from 1 through $fg-columns {
+
+    // Don't include the .off class for the last column
+    @if ( $i != $fg-columns ) {
+    	.#{ $fg-class-off }-#{$namespace}-#{$i} {
+    		margin-left: get-col-percent($i);
+    	}
+    }
+
+  }
+
+  .#{ $fg-class-off }-#{$namespace}-reset {
+  	margin-left: 0;
+  }
+
+  .start-#{$namespace} {
+  	-webkit-box-pack: start;
+  	-ms-flex-pack: start;
+  	justify-content: flex-start;
+  	text-align: start;
+  }
+  .center-#{$namespace} {
+  	-webkit-box-pack: center;
+  	-ms-flex-pack: center;
+  	justify-content: center;
+  	text-align: center
+  }
+  .end-#{$namespace} {
+  	-webkit-box-pack: end;
+  	-ms-flex-pack: end;
+  	justify-content: flex-end;
+  	text-align: end
+  }
+  .top-#{$namespace} {
+  	-webkit-box-align: start;
+  	-ms-flex-align: start;
+  	align-items: flex-start
+  }
+  .middle-#{$namespace} {
+  	-webkit-box-align: center;
+  	-ms-flex-align: center;
+  	align-items: center
+  }
+  .bottom-#{$namespace} {
+  	-webkit-box-align: end;
+  	-ms-flex-align: end;
+  	align-items: flex-end
+  }
+  .around-#{$namespace} {
+  	-ms-flex-pack: distribute;
+  	justify-content: space-around
+  }
+  .between-#{$namespace} {
+  	-webkit-box-pack: justify;
+  	-ms-flex-pack: justify;
+  	justify-content: space-between
+  }
+  .first-#{$namespace} {
+  	-webkit-box-ordinal-group: 0;
+  	-ms-flex-order: -1;
+  	order: -1
+  }
+  .last-#{$namespace} {
+  	-webkit-box-ordinal-group: 2;
+  	-ms-flex-order: 1;
+  	order: 1
+  }
+}
+
+
+/**
+ * Build the grid in two steps, to help minimize file size
+ * Step 1, for each namespace, create the grid-base
+ * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
+ */
+ @each $val in $fg-breakpoints {
+
+ 	$namespace: nth($val, 1);
+ 	@include grid-base( $namespace );
+
+ }
+
+ @each $val in $fg-breakpoints {
+ 	@if length($val) == 1 {
+
+ 		$namespace: nth($val, 1);
+ 		@include grid-sizes( $namespace );
+
+ 	} @else {
+
+ 		$namespace: nth($val, 1);
+ 		$size: nth($val, 2);
+
+ 		@media only screen and (min-width: #{$size}) {
+ 			@include grid-sizes( $namespace );
+ 		}
+ 	}
+ }
+
+
+
+
+

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.084" height="34.217" viewBox="0 0 34.084 34.217">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#fff;stroke-linecap:square;stroke-miterlimit:10;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="bank" transform="translate(1 1.133)">
+        <path id="Path_27" d="M17.042 1L1 9.556v4.278h32.084V9.556z" class="cls-1" data-name="Path 27" transform="translate(-1 -1)"/>
+        <path id="Line_1" d="M0 8.556V0" class="cls-1" data-name="Line 1" transform="translate(3.208 16.042)"/>
+        <path id="Line_2" d="M0 8.556V0" class="cls-1" data-name="Line 2" transform="translate(11.764 16.042)"/>
+        <path id="Line_3" d="M0 8.556V0" class="cls-1" data-name="Line 3" transform="translate(20.32 16.042)"/>
+        <path id="Line_4" d="M0 8.556V0" class="cls-1" data-name="Line 4" transform="translate(28.876 16.042)"/>
+        <circle id="Ellipse_4" cx="2.139" cy="2.139" r="2.139" class="cls-1" data-name="Ellipse 4" transform="translate(13.903 5.347)"/>
+        <path id="Rectangle_52" d="M0 0h32.084v4.278H0z" class="cls-1" data-name="Rectangle 52" transform="translate(0 27.806)"/>
+    </g>
+</svg>
