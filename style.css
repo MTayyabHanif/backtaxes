@@ -5127,6 +5127,22 @@ a.muted:hover {
       text-align: right;
       text-decoration: none; }
 
+@media (max-width: 765px) {
+  #question_modal {
+    display: block !important;
+    position: relative; }
+    #question_modal.modal .modal__body {
+      padding: 0; }
+    #question_modal.modal .modal__inner {
+      margin: 0; }
+    #question_modal.modal .modal__close {
+      display: none; }
+    #question_modal.modal .form-wrapper {
+      padding: 12px; }
+    #question_modal.modal span.checkbox__label {
+      display: inline-block;
+      line-height: 1.3333; } }
+
 @media (max-width: 768px) {
   #question_modal iframe {
     height: 780px; } }
@@ -5171,9 +5187,11 @@ a.muted:hover {
     margin: 0; }
 
 .questionsform {
-  background-color: #F0F8F9;
-  margin-top: -8rem;
-  padding-top: 104px; }
+  background-color: #F0F8F9; }
+  @media (max-width: 765px) {
+    .questionsform {
+      padding-top: 104px;
+      margin-top: -8rem; } }
   .questionsform .questionsform__wrap--title {
     text-align: center; }
     .questionsform .questionsform__wrap--title h2 {
@@ -5214,9 +5232,6 @@ a.muted:hover {
   background-color: #F0F8F9;
   text-align: center;
   margin-top: -5rem; }
-  @media (max-width: 765px) {
-    .brands {
-      margin-top: -2rem; } }
   .brands .brands__wrapper {
     text-align: center; }
   .brands .brand {
@@ -6006,6 +6021,8 @@ main .heading {
       padding: 16px 0; } }
   #question_modal b, #question_modal strong, #question_modal label {
     font-weight: 500; }
+  #question_modal b, #question_modal strong, #question_modal label, #question_modal p {
+    line-height: 1.3333; }
   #question_modal .radio:before, #question_modal .checkbox:before,
   #question_modal .radio__label:after, #question_modal .checkbox__label:after {
     margin-top: -8px; }

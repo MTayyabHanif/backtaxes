@@ -521,6 +521,9 @@
 	b, strong, label{
 		font-weight: 500;
 	}
+	b, strong, label,p{
+		line-height: 1.3333
+	}
 
 	.radio:before, .checkbox:before,
 	.radio__label:after, .checkbox__label:after {

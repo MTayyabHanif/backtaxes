@@ -115,6 +115,28 @@
 
 //  QUESTIONS MODAL
 #question_modal{
+	@media (max-width: 765px){
+		display: block !important;
+		position: relative;
+		&.modal {
+			.modal__body{
+				padding: 0;
+			}
+			.modal__inner{
+				margin: 0;
+			}
+			.modal__close{
+				display: none;
+			}
+			.form-wrapper{
+				padding: 12px;
+			}
+			span.checkbox__label {
+				display: inline-block;
+				line-height: 1.3333;
+			}
+		}
+	}
 	iframe{
 		@media (max-width: 768px){
 			height: 780px;
@@ -179,9 +201,10 @@
 // QUESTIOSN FORM IFRAME for mobile
 .questionsform{
 	background-color: #F0F8F9;
-	margin-top: -8rem;
-	padding-top: 104px;
-
+	@media (max-width: 765px){
+		padding-top: 104px;
+		margin-top: -8rem;
+	}
 	.questionsform__wrap--title{
 		text-align: center;
 		h2{
@@ -234,7 +257,7 @@
 	text-align: center;
 	margin-top: -5rem;
 	@media (max-width: 765px){
-		margin-top: -2rem;
+		// margin-top: -2rem;
 	}
 	.brands__wrapper{
 		text-align: center;
