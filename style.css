@@ -5040,7 +5040,7 @@ a.muted:hover {
   width: 100%;
   height: 78px;
   background-color: #3c5693;
-  z-index: 120;
+  z-index: 850;
   text-align: center;
   box-shadow: 0 -8px 10px rgba(59, 89, 152, 0.48); }
   @media (max-width: 440px) {
