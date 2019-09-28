@@ -193,6 +193,10 @@
 		h1{
 			color: $white;
 			margin: 0;
+			@media (max-width: 550px){
+				font-size: 38px;
+				line-height: 1.16;
+			}
 		}
 	}
 }

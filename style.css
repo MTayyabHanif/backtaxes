@@ -5185,6 +5185,10 @@ a.muted:hover {
   .heroHeader .heroHeader__title h1 {
     color: #fff;
     margin: 0; }
+    @media (max-width: 550px) {
+      .heroHeader .heroHeader__title h1 {
+        font-size: 38px;
+        line-height: 1.16; } }
 
 .questionsform {
   background-color: #F0F8F9; }
@@ -5707,11 +5711,11 @@ main .heading {
     display: block;
     margin: 0;
     padding: 2px; }
-  #question_modal .form-wrapper form label {
+  #question_modal .form-wrapper label {
     position: relative;
     display: block;
-    margin: 6px 0 0;
-    padding: 2px 0; }
+    margin: 6px 0 0 !important;
+    padding: 2px 0 !important; }
   #question_modal .form-wrapper form label input[type="radio"] {
     position: relative;
     display: inline-block;
@@ -5902,23 +5906,47 @@ main .heading {
     border-radius: 50%; }
   #question_modal .option-input2.radio::after {
     border-radius: 50%; }
+  #question_modal .check_tick {
+    text-align: center;
+    margin: 24px 0;
+    height: 50px; }
+    #question_modal .check_tick svg {
+      height: 50px;
+      width: 45px; }
   #question_modal .form-wrapper .fpage-bluebox {
-    min-height: 80px;
-    padding: 10px;
-    background: #CEE3FF;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
-  #question_modal .fpage_greenbox {
-    min-height: 30px;
-    padding: 10px;
-    margin-top: 10px;
-    background: #DFFCE6;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    border-radius: 20px; }
+    border: 1px solid #e3f4f6;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 24px; }
+    #question_modal .form-wrapper .fpage-bluebox span,
+    #question_modal .form-wrapper .fpage-bluebox b {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      text-align: left;
+      color: #00616b; }
+    #question_modal .form-wrapper .fpage-bluebox span {
+      font-weight: 400;
+      color: #616367; }
   #question_modal .fpage_greenbox h3 {
-    font-size: 22px;
-    margin-top: -5px;
-    font-family: 'Marcher', Arial, sans-serif; }
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00616b;
+    padding: 12px 26px;
+    background-color: #fff;
+    margin: 0 0 16px;
+    border: 1px solid #e3f4f6;
+    border-radius: 2px; }
+    #question_modal .fpage_greenbox h3:first-child {
+      margin: 24px 0 16px; }
   #question_modal .i1 {
     background: yellow;
     outline: none; }
@@ -5972,6 +6000,18 @@ main .heading {
     max-width: 540px;
     margin: 0 auto;
     padding: 0 1rem; }
+    @media screen and (max-width: 600px) {
+      #question_modal #div_question_15 > .row {
+        margin-bottom: -1rem; } }
+  @media screen and (max-width: 600px) {
+    #question_modal #div_question_15 > h4 {
+      font-size: 18px;
+      font-weight: 500; } }
+  #question_modal .send_data {
+    box-shadow: 0 10px 20px 0 rgba(59, 89, 152, 0.35) !important;
+    text-transform: uppercase; }
+    #question_modal .send_data:hover {
+      box-shadow: 0 6px 14px 0 rgba(59, 89, 152, 0.45) !important; }
   @media screen and (max-width: 600px) {
     #question_modal input[type=checkbox] {
       outline: none;

@@ -131,7 +131,7 @@
 											<div class="col-xs-12 col-sm-3 col-md-3">
 												<img src="./assets/img/svg/todo.svg" class="todo-icon-mobile">
 											</div>
-											<div class="col-xs-12 col-sm-9 col-sm-9" style="font-size: 15px;">
+											<div class="col-xs-12 col-sm-9 col-sm-9" style="font-size: 15px;display: none;">
 												<p style="font-size: 15px;margin-bottom: 0px;"><b>Please Answer The Following Qualification Question To :</b></p>
 												<ul style="list-style:none;font-size: 15px;margin:0px;padding: 0px;">
 													<li style="font-size: 15px;line-height:17px;margin:0px;padding: 0px;">- Check Your Eligbility for Various IRS &amp; State Tax Programs.</li>
@@ -547,50 +547,45 @@
 									<!-- Question 16 starts-->
 									<div id="div_question_16" class="row" style="display:none;">
 										<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-											<div id="instruction" style="width:90%;margin:auto;border-radius: 20px;">
+											<div id="instruction">
 												<div class="row">
-													<div class="col-9 col-sm-9 col-lg-9 col-xl-9 fpage-bluebox">
-														<b style="font-size: 25px;">Tax Case Evolution For :</b> <span id="full_name" style="font-size: 25px;"></span> <br>
-														<b style="font-size: 25px;">Tax Agency :</b> <span id="ag" style="font-size: 25px;"></span><br>
-														<b style="font-size: 25px;">Tax Amount :</b> <span id="answer_question_13" style="font-size: 25px;"></span><br>
-													</div>
-													<div class="hidden-lg hidden-md"><br></div>
-													<div class="col-3 col-sm-12 col-xs-12 col-lg-3 col-xl-3 text-center" style="min-height:100px;">
-														<img src="bigstock.jpg" width="80%" height="100px">
+													<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12 fpage-bluebox">
+														<b>Tax Case Evolution For :</b> <span id="full_name"></span> <br>
+														<b>Tax Agency :</b> <span id="ag"></span><br>
+														<b>Tax Amount :</b> <span id="answer_question_13"></span>
 													</div>
 												</div>
 											</div>
-											<h3 style="font-family: 'Open Sans', sans-serif;"><b>OK. GOOD NEWS <span class="span_first"></span></b> You seem to be a good candidate for tax debt relief pragram. Please provide your phone number in the highlighted field yellow field below or Call 1-800-996-9102 in order to get your free tax case evolution/consultation.</h3>
-											<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 off-lg-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 fpage_greenbox">
-												<h3 style="font-size: 18px;font-weight: bold;margin-top: 4px;"><img src="./assets/img/tick.png" width="30" height="35">&nbsp;&nbsp;See What Tax Relief Option or Program You Can Persue</h3>
-												<h3 style="font-size: 18px;font-weight: bold;"><img src="./assets/img/tick.png" width="30" height="35">&nbsp;&nbsp;See If You Qualify To Settle Tax for Less Than You Owe</h3>
-												<h3 style="font-size: 18px;font-weight: bold;"><img src="./assets/img/tick.png" width="30" height="35">&nbsp;&nbsp;Understand Services Needed for Tax Compliance</h3>
-												<h3 style="font-size: 18px;font-weight: bold;"><img src="./assets/img/tick.png" width="30" height="35">&nbsp;&nbsp;Get Cost Estimate &amp; Potential Plan of Action for Relief</h3>
+											<div class="check_tick">
+												<svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28"> <defs> <style> .cls-1{fill:#00616b} </style> </defs> <g id="n-check" transform="translate(-1 -3)"> <path id="Path_41" d="M26.277 12.937a12.038 12.038 0 1 1-4.219-5.621l1.554-1.332a14.014 14.014 0 1 0 4.177 5.346z" class="cls-1" data-name="Path 41"/> <path id="Path_42" d="M29 4L15 16l-6-5-2 2 8 9L31 5z" class="cls-1" data-name="Path 42"/> </g> </svg>
+											</div>
+											<h3 style="font-size: 18px; font-weight: 500; font-style: normal; font-stretch: normal; line-height: 1.33; letter-spacing: normal; text-align: left; color: #00616b;margin:0">You seem to be a good candidate for tax debt relief program. Please provide your phone number in the highlighted field yellow field below or <a href="tel:18009969102">Call 1-800-996-9102</a> in order to get your free tax case evaluation/consultation.</h3>
+											<div class="row">
+
+											<div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 fpage_greenbox">
+												<h3>See What Tax Relief Option or Program You Can Persue</h3>
+												<h3>See If You Qualify To Settle Tax for Less Than You Owe</h3>
+												<h3>Understand Services Needed for Tax Compliance</h3>
+												<h3>Get Cost Estimate &amp; Potential Plan of Action for Relief</h3>
 											</div>
 
-											<div class="col-md-12 text-center" style="margin-top: 15px;">
-												<span style="font-size:24px;"><b>Phone Number:</b></span>
-												<div class="hidden-lg hidden-md"><br></div>
-												<label></label>(<input type="number" name="phone" id="p1" size="3" maxlength="3" class="i1" style="border: 1px; solid white;height: 30px;width: 60px;">)-
-												<input type="number" name="phone" id="p2" size="3" maxlength="3" class="i1" style="border: 1px; solid white;height: 30px;width: 60px;"> -
-												<input type="number" name="phone" id="p3" size="3" maxlength="4" class="i1" style="border: 1px; solid white;height: 30px;width: 60px;">
+											<div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="margin-top: 15px;max-width: 395px;margin: 0 auto;">
+												<div class="form-item">
+								<label style="font-weight: 400;">Phone Number</label>
+								<div class="inline-fields">
+									(<input type="text" name="phone_area" maxlength="3" required>)
+									<input type="text" name="phone_pre" maxlength="3" required>
+									-
+									<input type="text" name="phone_number" maxlength="4" required>
+								</div>
+							</div>
+
 											</div>
-											<div align="center" class="col-md-12 col-xs-12 col-sm-12 p-5">
-												<button type="button" class="button" style="text-transform: uppercase;" onclick="send_data()">Get Tax Relief Options &amp; Quote</button>
+											<div align="center" class="col-12 col-lg-12 col-md-12 col-xs-12 col-sm-12 p-5">
+												<button  style=" margin-top:0; padding: 18px; " type="button" class="button send_data" onclick="send_data()">Get Tax Relief Options &amp; Quote</button>
+											</div>
 											</div>
 
-											<h6 style="clear:both;padding:10px 0px;">By clicking the "Get Quote" button, my submission is not an obligation of purchase &amp; I waive any registration on the Do Not Call list. You also agree to be contacted (email, phone, sms) by one of our 3rd party tax partners in our network who specialize in resolving tax problems.</h6>
-											<div style="padding:25px 10px;">
-												<div class="col-lg-4 col-md-14 col-xs-12 col-sm-12 mx-auto text-center">
-													<center><img src="logo1.jpg" class="img-responsive"></center>
-												</div>
-												<div class="col-lg-4 col-md-14 col-xs-12 col-sm-12 mx-auto;">
-													<center><img src="logo2.jpg" class="img-responsive"></center>
-												</div>
-												<div class="col-lg-4 col-md-14 col-xs-12 col-sm-12 mx-auto;">
-													<center><img src="logo3.png" class="img-responsive"></center>
-												</div>
-											</div>
 										</div><br>
 
 									</div>

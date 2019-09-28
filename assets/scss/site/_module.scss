@@ -118,11 +118,11 @@
 		margin: 0;
 		padding: 2px;
 	}
-	.form-wrapper form label {
+	.form-wrapper label {
 		position: relative;
 		display: block;
-		margin: 6px 0 0;
-		padding: 2px 0;
+		margin: 6px 0 0 !important;
+		padding: 2px 0 !important;
 	}
 	.form-wrapper form label input[type="radio"] {
 		position: relative;
@@ -346,27 +346,59 @@
 	.option-input2.radio::after {
 		border-radius: 50%;
 	}
+	.check_tick {
+		text-align: center;
+		margin: 24px 0;
+		height: 50px;
+
+		svg {
+			height: 50px;
+			width: 45px;
+		}
+	}
+
 	/*Final page css*/
 	.form-wrapper .fpage-bluebox{
-		min-height:80px;padding:10px;
-		background:#CEE3FF;
-		border-radius:15px;
-		box-shadow: 0 0 15px rgba(0,0,0,0.5);
+		border: 1px solid #e3f4f6;
+		border-radius: 2px;
+		background-color: #fff;
+		padding: 24px;
+		span,
+		b{
+			font-size: 18px;
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.33;
+			letter-spacing: normal;
+			text-align: left;
+			color: #00616b;
+		}
+		span{
+			font-weight: 400;
+			color: #616367;
+		}
 	}
 	.fpage_greenbox
 	{
-		min-height:30px;
-		padding:10px;
-		margin-top:10px;
-		background:#DFFCE6;
-		box-shadow: 0 0 5px rgba(0,0,0,0.5);
-		border-radius:20px;
-	}
-	.fpage_greenbox h3
-	{
-		font-size:22px;
-		margin-top:-5px;
-		font-family: 'Marcher', Arial, sans-serif;
+		h3{
+			font-size: 18px;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.33;
+			letter-spacing: normal;
+			text-align: left;
+			color: #00616b;
+			padding: 12px 26px;
+			background-color: #fff;
+			margin: 0 0 16px;
+			border: 1px solid #e3f4f6;
+			border-radius: 2px;
+			&:first-child{
+				margin: 24px 0 16px;
+			}
+		}
 	}
 	.i1
 	{
@@ -439,9 +471,24 @@
 			max-width: 540px;
 			margin: 0 auto;
 			padding: 0 1rem;
+			@media screen and (max-width: 600px) {
+				margin-bottom: -1rem;
+			}
+		}
+		>h4{
+			@media screen and (max-width: 600px) {
+				font-size: 18px;
+				font-weight: 500;
+			}
 		}
 	}
-
+	.send_data{
+		box-shadow: 0 10px 20px 0 rgba(59, 89, 152, 0.35) !important;
+		text-transform: uppercase;
+		&:hover{
+			box-shadow: 0 6px 14px 0 rgba(59, 89, 152, 0.45) !important;
+		}
+	}
 	/* On screens that are 600px or less, set the background color to olive */
 	@media screen and (max-width: 600px) {
 
