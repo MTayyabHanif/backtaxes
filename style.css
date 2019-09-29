@@ -5130,7 +5130,8 @@ a.muted:hover {
 @media (max-width: 765px) {
   #question_modal {
     display: block !important;
-    position: relative; }
+    position: relative;
+    top: -22px; }
     #question_modal.modal .modal__body {
       padding: 0; }
     #question_modal.modal .modal__inner {
