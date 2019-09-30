@@ -440,8 +440,7 @@
 									<div id="div_question_13" class="row" style="display:none;">
 										<h4>13. How Much In Taxes Do They Claim You Owe?<!--How Much Does <span id="answer_13"></span> Claim You Owe? (Estimate Is Fine)  --></h4>
 										<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 mx-auto answer answerbutton_wrap">
-											<br><br>
-											<center>
+											<center style=" margin-top: 1.6rem; ">
 												<select class="form-control" name="question_13" id="question_13" onchange="show_next_question('13','14')">
 													<option value="">Select Tax Debt Estimate</option>
 													<option value="$7,500 to $9,999">$7,500 to $9,999</option>
@@ -454,7 +453,7 @@
 													<option value="$60,000 to $79,999">$60,000 to $79,999</option>
 													<option value="$80,000 to $99,999">$80,000 to $99,999</option>
 													<option value="$100,000+">$100,000+</option>
-												</select><br><br><br>
+												</select><br>
 											</center>
 										</div><br>
 										<h5>Estimating The Amount They Claim You Owe Is Fine</h5>
@@ -495,7 +494,7 @@
 										</div><br>
 										<div class="row">
 											<div class="col-xs-12 col-md-3 text-center">Zip Code</div>
-											<div class="col-xs-12 col-md-9"><input type="number" maxlength="5" minlength="5" name="zip" id="zip" class="form-control"></div>
+											<div class="col-xs-12 col-md-9"><input type="text" maxlength="5" minlength="5" name="zip" id="zip" class="form-control"></div>
 										</div><br>
 										<div align="center" class="col-md-12 col-xs-12 col-sm-12">
 											<center>
@@ -572,7 +571,7 @@
 											<div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="margin-top: 15px;max-width: 395px;margin: 0 auto;">
 												<div class="form-item">
 								<label style="font-weight: 400;">Phone Number</label>
-								<div class="inline-fields">
+								<div class="inline-fields modal-phone" style="width: 100%; box-sizing: border-box;">
 									(<input type="text" name="phone_area" maxlength="3" required>)
 									<input type="text" name="phone_pre" maxlength="3" required>
 									-

@@ -5237,6 +5237,9 @@ a.muted:hover {
   background-color: #F0F8F9;
   text-align: center;
   margin-top: -5rem; }
+  @media (max-width: 765px) {
+    .brands {
+      margin-top: -2rem; } }
   .brands .brands__wrapper {
     text-align: center; }
   .brands .brand {
@@ -5374,6 +5377,9 @@ main .heading {
     @media (max-width: 440px) {
       .free-quote form {
         width: auto; } }
+    @media (max-width: 768px) {
+      .free-quote form .inline-fields input {
+        max-width: 29%; } }
   .free-quote .form-item {
     margin: 0 16px; }
     @media (max-width: 768px) {
@@ -5983,6 +5989,8 @@ main .heading {
     width: 100px;
     display: block;
     position: relative; }
+  #question_modal .modal-phone input {
+    max-width: 29%; }
   #question_modal .todo-icon-mobile {
     width: 64px;
     height: auto;
