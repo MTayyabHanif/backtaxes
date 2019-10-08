@@ -44,11 +44,40 @@ document.addEventListener("DOMContentLoaded",function(){
 		acc[i].addEventListener("click", function() {
 			this.classList.toggle("active");
 			var panel = this.nextElementSibling;
-			if (panel.style.maxHeight){
-				// panel.style.maxHeight = null;
-			} else {
-				// panel.style.maxHeight = panel.scrollHeight + "px";
-			}
+		});
+	}
+
+	// scrollintoview
+	var elems = document.getElementsByClassName("answerbutton");
+	var next_btns = document.getElementsByClassName("next-btn");
+	var send_data_btns = document.getElementsByClassName("send_data");
+	var k, m, o;
+
+	for (k = 0; k < elems.length; k++) {
+		elems[k].addEventListener("click", function() {
+			var l = document.getElementById('myBar').getBoundingClientRect().top + window.scrollY - 100;
+			window.scroll({
+				top: l,
+				behavior: 'smooth'
+			});
+		});
+	}
+	for (m = 0; m < next_btns.length; m++) {
+		next_btns[m].addEventListener("click", function() {
+			var l = document.getElementById('myBar').getBoundingClientRect().top + window.scrollY - 100;
+			window.scroll({
+				top: l,
+				behavior: 'smooth'
+			});
+		});
+	}
+	for (o = 0; o < send_data_btns.length; o++) {
+		send_data_btns[o].addEventListener("click", function() {
+			var l = document.getElementById('myBar').getBoundingClientRect().top + window.scrollY - 100;
+			window.scroll({
+				top: l,
+				behavior: 'smooth'
+			});
 		});
 	}
 

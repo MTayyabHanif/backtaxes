@@ -479,11 +479,6 @@ main {
 			width: auto;
 		}
 
-		.inline-fields input	{
-			@media (max-width: 768px){
-				max-width: 29%;
-			}
-		}
 	}
 	.form-item{
 		margin: 0 16px;
